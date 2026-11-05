@@ -1,0 +1,13 @@
+AI_LOG.txt - Shadow & Light (Game Development Fundamentals, Assignment 8-9)
+Student: Artyom, group OR1-3
+Tool: Claude (claude.ai chat), used for learning and explanations.
+No AI agents that write code in the project (Claude Code, Codex, Cursor, Copilot agent) were used.
+
+2026-11-03  Asked: write the 10-part GDD from my game idea. Got: GDD draft. My change: adapted the HUD to my game (three flames, level number, light slider).
+2026-11-03  Asked: step-by-step plan for the assignment. Got: plan (Unity project, Git, three screens, Device Simulator, hand-in files).
+2026-11-03  Asked: Universal 2D or 2D Built-In? Got: explanation, recommended Universal 2D (Light 2D for visuals). I chose Universal 2D.
+2026-11-04  Asked: how to set up Canvas Scaler, anchors and a SafeArea panel. Got: setup steps and SafeArea.cs (based on the lecture code).
+2026-11-04  Asked: Main Menu and Pause screens. Got: MainMenu.cs and PauseMenu.cs with explanations of Time.timeScale and scene loading.
+2026-11-04  Asked: how to verify that pause stops time and how to test devices. Got: Spinner.cs and a list of Device Simulator devices.
+
+Scripts written by Claude and pasted by me: SafeArea.cs, MainMenu.cs, PauseMenu.cs, Spinner.cs.
