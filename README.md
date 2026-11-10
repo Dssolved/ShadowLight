@@ -2,11 +2,12 @@
 
 A 2D light-and-shadow puzzle for Android (landscape). You move a lantern, the shadows of floating blocks change, and a small hero walks across the shadows to the door.
 
-Course project: Game Development Fundamentals, Narxoz University (RK2, Assignment 8-9).
+Course project: Game Development Fundamentals, Narxoz University (RK2).
 
 ## Status
 
-Assignment 8-9: Main Menu, HUD and Pause screens are done. Game mechanics come in the next assignments.
+- Assignment 8-9: Main Menu, HUD and Pause screens.
+- Assignment 10: lantern on a rail, shadow bridges, auto-walking hero with lives and checkpoints, three enemy types (Patroller, Shooter, Charger) that react to the lantern light, one level with all three.
 
 ## Requirements
 
@@ -33,10 +34,24 @@ All screens use Canvas Scaler (Scale With Screen Size, 1920x1080, Match 1), anch
 
 ```
 Assets/_Project/
-  Scenes/    MainMenu, Game
-  Scripts/   SafeArea, MainMenu, PauseMenu, Spinner
+  Scenes/     MainMenu, Game
+  Scripts/    game scripts (one class per file)
+  Prefabs/    Patroller, Shooter, Charger, Projectile
+  Sprites/    HeroSheet, StoneSlab
+  Materials/  Shadow, Laser, SpriteUnlit
 ```
+
+## Art sources
+
+| Asset | Source |
+|---|---|
+| HeroSheet.png | Author's character concept made with Gemini; background removed with Unity AI (Photoroom Background Removal) |
+| StoneSlab.png | Generated with Unity AI (Gemini 3.1 Flash), background removed with Unity AI (Photoroom Background Removal) |
+| Other shapes | Unity built-in 2D sprites (Square, Circle, Capsule) |
+
+Licenses of AI-generated assets must be checked against the Unity AI terms before the Google Play release.
 
 ## AI usage
 
-An AI chat was used for learning and explanations. See `AI_LOG.txt`. No AI agents that write code in the project were used.
+- Assignment 8-9: an AI chat was used for learning and explanations, see `AI_LOG.txt`. No AI agents wrote code.
+- From Assignment 10 (agents allowed by the course): Claude Code was used as a coding agent under my lead. Decisions and corrections are logged in `DECISIONS.md`.

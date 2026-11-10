@@ -20,7 +20,7 @@ public class BlockShadow : MonoBehaviour
         shadowCollider = GetComponent<PolygonCollider2D>();
         edgeLine = GetComponent<LineRenderer>();
 
-        int cornerCount = block.CornerCount;
+        int cornerCount = FloatingBlock.CornerCount;
         edgeLine.positionCount = cornerCount;
         blockCorners = new Vector2[cornerCount];
         shadowCorners = new Vector2[cornerCount];

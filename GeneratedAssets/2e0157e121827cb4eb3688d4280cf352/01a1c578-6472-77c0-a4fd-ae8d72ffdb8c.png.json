@@ -1,0 +1,31 @@
+{
+    "asset": "2e0157e121827cb4eb3688d4280cf352",
+    "fileName": "01a1c578-6472-77c0-a4fd-ae8d72ffdb8c.png",
+    "prompt": "2D game sprite, side view, a single flat rectangular floating stone slab, wide and thin (about 6 to 1 ratio), rough cracked dark grey-violet stone with chipped edges and a few small moss-free cracks, soft hand-painted style, muted colors (#4A4058 base, darker #2A2238 cracks, faint warm highlight on the top edge), no shadow, no background, isolated object centered, plain solid white background, game asset",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 384
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
