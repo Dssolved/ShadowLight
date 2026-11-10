@@ -1382,7 +1382,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 18.333332, y: 18.333332, z: 18.333332}
+  m_LocalScale: {x: 23.333332, y: 23.333332, z: 23.333332}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 923256495}
@@ -2188,7 +2188,7 @@ MonoBehaviour:
   railStart: {fileID: 293711970}
   railEnd: {fileID: 1745735344}
   depthFromWall: 10
-  lightRadius: 5.5
+  lightRadius: 7
 --- !u!212 &923256494
 SpriteRenderer:
   serializedVersion: 2
@@ -4222,6 +4222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shooter
       objectReference: {fileID: 0}
+    - target: {fileID: 3912172703566599819, guid: 35845712def39c645a8c873dd31c043d, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 4768279448812794643, guid: 35845712def39c645a8c873dd31c043d, type: 3}
       propertyPath: lantern
       value: 
@@ -4318,6 +4322,74 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
+--- !u!1001 &5511539228033973391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666175865297045623, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022291401799460631, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: m_Name
+      value: Charger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464664113956725038, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 536773372}
+    - target: {fileID: 4938254268147217300, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: lantern
+      value: 
+      objectReference: {fileID: 923256493}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3981907716957565591, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4337,3 +4409,4 @@ SceneRoots:
   - {fileID: 1364938099}
   - {fileID: 2818256852911651588}
   - {fileID: 504459167321462318}
+  - {fileID: 5511539228033973391}
