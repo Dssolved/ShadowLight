@@ -680,7 +680,8 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -757,7 +758,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -779,10 +786,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 25075ab9-6ef4-47d1-900d-44e6cc43a8d8
+  cloudProjectId: 59321589-cf6e-4eff-ae4f-92d16775252a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: ShadowLight 2026-11-03_22-24-03
+  projectName: ShadowLight (1)
   organizationId: lovelyfromhell
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
