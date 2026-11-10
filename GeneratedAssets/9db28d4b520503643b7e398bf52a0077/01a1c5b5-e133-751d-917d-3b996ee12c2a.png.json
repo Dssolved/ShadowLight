@@ -1,0 +1,41 @@
+{
+    "asset": "9db28d4b520503643b7e398bf52a0077",
+    "fileName": "01a1c5b5-e133-751d-917d-3b996ee12c2a.png",
+    "prompt": "Sprite sheet of the exact character in the reference image (same pointed dark hood, long dark coat, glowing yellow eye, rose-pink scarf, small boots, same thin dark outline and flat cel shading). FALLING: 2 frames in ONE horizontal row with a wide empty gap, side view facing RIGHT, same size as a standing character. Frame 1: falling down, arms raised up in surprise, legs dangling, coat and scarf blown upward by the air. Frame 2: same pose, coat and scarf fluttering upward in a slightly different shape. No ground, no shadow, no motion lines, no text, plain solid white background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e656e2c8922ddee4ebbd6098815d8fa6",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 576
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

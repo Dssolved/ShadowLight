@@ -1,0 +1,31 @@
+{
+    "asset": "54964cf1831f855499bd03ecf330e0c2",
+    "fileName": "01a1c59b-7509-78d0-a947-78293c84086b.png",
+    "prompt": "Original 2D game character: a small hooded wanderer, pure flat black silhouette, a rounded hood that hides the face, short black cloak to the knees, thin legs with small boots. A long pale cream scarf (#EFE5CC) wrapped around the neck, one end hanging down the back. Two small glowing warm yellow eyes shining from the darkness inside the hood. Exact side view, facing RIGHT, standing still in a calm neutral pose, full body, feet at the bottom. Single character centered, clean crisp edges, minimal detail, no ground shadow, no text, plain solid white background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 576
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "asset": "e656e2c8922ddee4ebbd6098815d8fa6",
+    "fileName": "01a1c5aa-eb78-7fb9-bd2d-3c0a2f0503f4.png",
+    "prompt": "Original 2D game hero, cute chibi proportions (big head, small body): a tall pointed hood and a long coat in very dark brown-black (#2A1E22), the face is a dark void with two glowing yellow almond eyes, a soft rose-pink scarf (#D4587A) wrapped around the neck with one long end trailing behind, small dark boots. Exact side view (profile) facing RIGHT, standing still in a relaxed pose, scarf end hanging behind to the left. Flat cel-shaded style with one darker shade, clean edges. Full body, centered, no ground shadow, no text, plain solid white background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 576
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

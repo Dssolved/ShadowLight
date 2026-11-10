@@ -1,0 +1,41 @@
+{
+    "asset": "d65ff18dd86c83644b59ee86a4ade2cb",
+    "fileName": "01a1c5b5-361d-7aca-9844-7525a71bf2a0.png",
+    "prompt": "Sprite sheet of the exact character in the reference image (same pointed dark hood, long dark coat, glowing yellow eye, rose-pink scarf, small boots, same thin dark outline and flat cel shading). IDLE breathing loop: 4 frames in ONE horizontal row, evenly spaced with wide empty gaps so frames never touch, every frame exact side view facing RIGHT, standing still, identical size, boots on the same baseline. Between frames only small changes: the body rises and sinks very slightly as if breathing, the scarf end gently waves behind to the left in 4 different soft curves. No ground shadow, no text, plain solid white background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e656e2c8922ddee4ebbd6098815d8fa6",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 2048,
+        "height": 832
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

@@ -37,7 +37,8 @@ Assets/_Project/
   Scenes/     MainMenu, Game
   Scripts/    game scripts (one class per file)
   Prefabs/    Patroller, Shooter, Charger, Projectile
-  Sprites/    HeroSheet, StoneSlab
+  Sprites/    hero frames, StoneSlab, Concept/
+  Animations/ Hero.controller, HeroIdle, HeroWalk, HeroFall
   Materials/  Shadow, Laser, SpriteUnlit
 ```
 
@@ -45,7 +46,9 @@ Assets/_Project/
 
 | Asset | Source |
 |---|---|
-| HeroSheet.png | Author's character concept made with Gemini; background removed with Unity AI (Photoroom Background Removal) |
+| HeroSide 1.png, HeroWalk.png, HeroIdle.png, HeroFall.png | Hooded hero, generated with Unity AI (Gemini 3.1 Flash) from a text description of the author's design; background removed with Unity AI (Photoroom Background Removal) |
+| Concept/HeroConceptA.png, HeroConceptB.png | Author's character concepts (style reference only) |
+| HeroSheet.png | First hero concept (made with Gemini), no longer used in the game |
 | StoneSlab.png | Generated with Unity AI (Gemini 3.1 Flash), background removed with Unity AI (Photoroom Background Removal) |
 | Other shapes | Unity built-in 2D sprites (Square, Circle, Capsule) |
 
