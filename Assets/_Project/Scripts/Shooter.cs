@@ -106,7 +106,9 @@ public class Shooter : MonoBehaviour
         if (Vector2.Angle(lookDirection, toHero) > fieldOfViewDegrees / 2f) return false;
 
         RaycastHit2D wallHit = Physics2D.Raycast(transform.position, toHero.normalized, toHero.magnitude, wallMask);
-        return wallHit.collider == null;
+        bool lineIsClear = wallHit.collider == null;
+        Debug.DrawLine(transform.position, hero.transform.position, lineIsClear ? Color.green : Color.red, sightCheckIntervalSeconds);
+        return lineIsClear;
     }
 
     bool IsOnScreen()
