@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(LightSensor), typeof(SpriteRenderer), typeof(LineRenderer))]
 public class Charger : MonoBehaviour
 {
-    enum ChargerState { Dormant, WindUp, Dash, Stunned }
+    enum ChargerState { Dormant, WindUp, Dash, Stunned, Return }
 
     [SerializeField] Hero hero;
     [SerializeField] float triggerRange = 4.5f;
@@ -13,6 +13,7 @@ public class Charger : MonoBehaviour
     [SerializeField] float dashDistance = 5f;
     [SerializeField] float hitRadius = 0.6f;
     [SerializeField] float stunSeconds = 1f;
+    [SerializeField] float returnSpeed = 2f;
     [SerializeField] LayerMask groundMask;
     [SerializeField] float edgeLookAhead = 0.5f;
     [SerializeField] float edgeCheckDistance = 1f;
@@ -29,6 +30,7 @@ public class Charger : MonoBehaviour
     float stateTimer;
     Vector2 dashDirection;
     Vector2 dashTarget;
+    Vector2 homePosition;
 
     void Awake()
     {
@@ -36,6 +38,7 @@ public class Charger : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         dashLane = GetComponent<LineRenderer>();
         mainCamera = Camera.main;
+        homePosition = transform.position;
         SetState(ChargerState.Dormant);
     }
 
@@ -66,7 +69,12 @@ public class Charger : MonoBehaviour
                 break;
 
             case ChargerState.Stunned:
-                if (stateTimer >= stunSeconds) SetState(ChargerState.Dormant);
+                if (stateTimer >= stunSeconds) SetState(ChargerState.Return);
+                break;
+
+            case ChargerState.Return:
+                transform.position = Vector2.MoveTowards(transform.position, homePosition, returnSpeed * Time.deltaTime);
+                if ((Vector2)transform.position == homePosition) SetState(ChargerState.Dormant);
                 break;
         }
     }
