@@ -62,7 +62,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 10162b6509f32b64ca65cb235ca1116e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   dashDistance: 5
   hitRadius: 0.6
   stunSeconds: 1
+  returnSpeed: 2
   groundMask:
     serializedVersion: 2
     m_Bits: 192

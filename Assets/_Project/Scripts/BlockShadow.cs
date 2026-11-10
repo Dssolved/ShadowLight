@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(PolygonCollider2D), typeof(MeshFilter), typeof(MeshRenderer))]
+[RequireComponent(typeof(LineRenderer))]
 public class BlockShadow : MonoBehaviour
 {
     [SerializeField] FloatingBlock block;
@@ -8,6 +9,7 @@ public class BlockShadow : MonoBehaviour
     [SerializeField] Color shadowColor = new Color(0.553f, 0.498f, 0.69f);
 
     PolygonCollider2D shadowCollider;
+    LineRenderer edgeLine;
     Mesh shadowMesh;
     Vector2[] blockCorners;
     Vector2[] shadowCorners;
@@ -16,8 +18,10 @@ public class BlockShadow : MonoBehaviour
     void Awake()
     {
         shadowCollider = GetComponent<PolygonCollider2D>();
+        edgeLine = GetComponent<LineRenderer>();
 
         int cornerCount = block.CornerCount;
+        edgeLine.positionCount = cornerCount;
         blockCorners = new Vector2[cornerCount];
         shadowCorners = new Vector2[cornerCount];
         meshVertices = new Vector3[cornerCount];
@@ -51,5 +55,6 @@ public class BlockShadow : MonoBehaviour
         shadowCollider.SetPath(0, shadowCorners);
         shadowMesh.vertices = meshVertices;
         shadowMesh.RecalculateBounds();
+        edgeLine.SetPositions(meshVertices);
     }
 }
