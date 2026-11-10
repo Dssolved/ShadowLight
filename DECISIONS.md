@@ -10,3 +10,4 @@ What I asked the agent, what it got wrong, what I changed and why. 3-5 lines per
 2026-11-10  The lecture code puts units in comments, but our rule is no comments. Units go into field names instead (respawnDelaySeconds, loadDelaySeconds).
 2026-11-11  Patroller: the first rule "lit = not in a shadow" made every enemy lit almost everywhere, because the whole wall is lit. Added a light radius around the lantern (5.5 units, shown as a soft circle): an enemy is lit only near the lantern and outside shadows.
 2026-11-11  Patroller wind-up 0.5 s with a red color; lighting it during the wind-up cancels the hit. This is the player's counter, because the hero is not controlled.
+2026-11-11  Shooter shot is a slow projectile (5 units/s), not an instant raycast hit, so the laser and the shot are both readable. The projectile uses a Dynamic Rigidbody2D with gravity 0: a Kinematic body would not get trigger events from the static walls.
