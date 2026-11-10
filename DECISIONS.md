@@ -8,3 +8,5 @@ What I asked the agent, what it got wrong, what I changed and why. 3-5 lines per
 2026-11-10  Asked for the shadow projection. The shadow mesh looked paler than #8D7FB0: the project uses Linear color space and mesh vertex colors are not converted. Fixed with shadowColor.linear.
 2026-11-10  Hero FSM: when the shadow bridge is removed, the hero now falls straight down instead of keeping his walking speed, so the player can predict where he lands.
 2026-11-10  The lecture code puts units in comments, but our rule is no comments. Units go into field names instead (respawnDelaySeconds, loadDelaySeconds).
+2026-11-11  Patroller: the first rule "lit = not in a shadow" made every enemy lit almost everywhere, because the whole wall is lit. Added a light radius around the lantern (5.5 units, shown as a soft circle): an enemy is lit only near the lantern and outside shadows.
+2026-11-11  Patroller wind-up 0.5 s with a red color; lighting it during the wind-up cancels the hit. This is the player's counter, because the hero is not controlled.
