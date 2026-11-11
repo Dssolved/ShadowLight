@@ -5632,6 +5632,10 @@ PrefabInstance:
       propertyPath: hero
       value: 
       objectReference: {fileID: 536773372}
+    - target: {fileID: 5512026813921165759, guid: 35845712def39c645a8c873dd31c043d, type: 3}
+      propertyPath: aimSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5656,6 +5660,10 @@ PrefabInstance:
       propertyPath: hero
       value: 
       objectReference: {fileID: 536773372}
+    - target: {fileID: 1395420180871414941, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
+      propertyPath: chaseSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1395420180871414941, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
@@ -5783,6 +5791,10 @@ PrefabInstance:
     - target: {fileID: 3464664113956725038, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
       propertyPath: triggerRange
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464664113956725038, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
+      propertyPath: windUpSeconds
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4938254268147217300, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
       propertyPath: lantern
