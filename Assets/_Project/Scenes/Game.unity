@@ -2126,7 +2126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e6b3046bd596846ad545bf99420d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StateLabelSwitch
-  showStateLabels: 1
+  showStateLabels: 0
   stateLabels:
   - {fileID: 1141743065}
   - {fileID: 432365618}
