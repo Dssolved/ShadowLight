@@ -1,0 +1,31 @@
+{
+    "asset": "cbc780fefae148a4abfffbc37dbd453c",
+    "fileName": "01a1c92d-f2ff-78b2-af44-1c964497efcc.png",
+    "prompt": "Hand-painted 2D game UI element: a long horizontal glowing fill bar, warm amber-orange molten light (#F2B84B) with a soft bright core and gentle glow, rounded ends, flat front view, straight horizontal, centered, plain flat white background, storybook style, no text.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 384
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

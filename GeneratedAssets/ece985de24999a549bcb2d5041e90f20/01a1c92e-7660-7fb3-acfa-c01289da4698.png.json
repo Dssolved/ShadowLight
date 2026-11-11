@@ -1,0 +1,31 @@
+{
+    "asset": "ece985de24999a549bcb2d5041e90f20",
+    "fileName": "01a1c92e-7660-7fb3-acfa-c01289da4698.png",
+    "prompt": "Hand-painted 2D game icon: a single small candle flame, bright warm amber and yellow with an orange outer edge and a pale yellow core, teardrop shape, soft glow, thick dark outline, centered, plain flat white background, storybook style, no text.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 576
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

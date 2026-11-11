@@ -5,8 +5,8 @@ public class FlamesHud : MonoBehaviour
 {
     [SerializeField] Lives lives;
     [SerializeField] Image[] flames;
-    [SerializeField] Color litColor = new Color(0.949f, 0.722f, 0.294f, 1f);
-    [SerializeField] Color spentColor = new Color(0.949f, 0.722f, 0.294f, 0.25f);
+    [SerializeField] Sprite litSprite;
+    [SerializeField] Sprite spentSprite;
 
     void OnEnable()
     {
@@ -27,7 +27,7 @@ public class FlamesHud : MonoBehaviour
     {
         for (int i = 0; i < flames.Length; i++)
         {
-            flames[i].color = i < litCount ? litColor : spentColor;
+            flames[i].sprite = i < litCount ? litSprite : spentSprite;
         }
     }
 }
