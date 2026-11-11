@@ -1,0 +1,31 @@
+{
+    "asset": "e36681d9f90fbea439b8f5e448235570",
+    "fileName": "01a1c93b-3677-7fb4-9b65-8013fcbc820b.png",
+    "prompt": "Seamless tileable hand-painted dungeon wall texture: large irregular warm brown-grey stone bricks with dark mortar lines, subtle cracks and soft moss stains, muted low-contrast colors, flat even lighting with no shadows or vignette, no objects, front view, storybook style.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

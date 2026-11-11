@@ -1,0 +1,31 @@
+{
+    "asset": "b69438924abb1d14393564d34dbcb1b1",
+    "fileName": "01a1c93c-272a-7c64-a2b1-85ab846382ec.png",
+    "prompt": "Hand-painted 2D game exit door, flat front view: a tall arched stone doorway with an old wooden double door, warm golden light glowing through the crack in the middle and around the arch, iron hinges, mossy stone frame, thick dark outline, centered, single object, plain flat white background, storybook style, no text.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 576,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

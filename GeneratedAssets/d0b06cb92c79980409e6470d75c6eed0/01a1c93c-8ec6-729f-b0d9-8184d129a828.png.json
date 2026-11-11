@@ -1,0 +1,31 @@
+{
+    "asset": "d0b06cb92c79980409e6470d75c6eed0",
+    "fileName": "01a1c93c-8ec6-729f-b0d9-8184d129a828.png",
+    "prompt": "Hand-painted 2D game prop: a single hanging stalactite rock chunk, tall narrow dark violet-grey stone tapering to a point at the bottom, flat top edge, cracks and a few mossy spots, thick dark outline, centered, plain flat white background, storybook style, no text.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 576,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

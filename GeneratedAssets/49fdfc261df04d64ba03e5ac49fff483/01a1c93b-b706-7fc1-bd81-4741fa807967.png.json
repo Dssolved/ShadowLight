@@ -1,0 +1,31 @@
+{
+    "asset": "49fdfc261df04d64ba03e5ac49fff483",
+    "fileName": "01a1c93b-b706-7fc1-bd81-4741fa807967.png",
+    "prompt": "Hand-painted 2D game terrain block, flat front view: a square chunk of dark violet-grey cobblestone cliff filling the whole frame edge to edge, with a thin rim of dark green moss and small tufts of grass on the very top edge, stone texture of irregular rocks with dark outlines, muted colors, no background objects, storybook style.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 576
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
