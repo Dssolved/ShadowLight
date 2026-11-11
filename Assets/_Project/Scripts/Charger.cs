@@ -21,6 +21,7 @@ public class Charger : MonoBehaviour
     [SerializeField] Color windUpColor = new Color(1f, 0.29f, 0.24f);
     [SerializeField] Color stunnedColor = new Color(0.353f, 0.306f, 0.42f);
     [SerializeField] TMP_Text stateLabel;
+    [SerializeField] SpriteStateAnimator spriteAnimator;
 
     LightSensor lightSensor;
     SpriteRenderer spriteRenderer;
@@ -85,6 +86,8 @@ public class Charger : MonoBehaviour
         stateTimer = 0f;
         dashLane.enabled = next == ChargerState.WindUp;
         spriteRenderer.color = ColorFor(next);
+        if (next == ChargerState.Return) spriteRenderer.flipX = homePosition.x < transform.position.x;
+        spriteAnimator.Play((int)next);
         if (stateLabel != null) stateLabel.text = next.ToString();
     }
 
@@ -99,6 +102,7 @@ public class Charger : MonoBehaviour
     {
         float side = Mathf.Sign(hero.transform.position.x - transform.position.x);
         dashDirection = new Vector2(side, 0f);
+        spriteRenderer.flipX = side < 0f;
         dashTarget = (Vector2)transform.position + dashDirection * dashDistance;
         dashLane.SetPosition(0, transform.position);
         dashLane.SetPosition(1, dashTarget);

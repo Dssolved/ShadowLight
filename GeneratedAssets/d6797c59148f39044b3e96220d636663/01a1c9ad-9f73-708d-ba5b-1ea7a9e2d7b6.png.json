@@ -1,0 +1,31 @@
+{
+    "asset": "d6797c59148f39044b3e96220d636663",
+    "fileName": "01a1c9ad-9f73-708d-ba5b-1ea7a9e2d7b6.png",
+    "prompt": "Seamless tileable hand-painted texture of dark violet-black smoke and ink clouds: very dark purple base color (#1C1626) with soft slightly lighter violet (#3A2F4F) swirling wisps and faint mist, no outlines, no objects, even flat lighting, moody storybook style.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

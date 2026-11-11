@@ -19,6 +19,7 @@ public class Shooter : MonoBehaviour
     [SerializeField] Color normalColor = new Color(0.878f, 0.353f, 0.278f);
     [SerializeField] Color blindedColor = new Color(0.353f, 0.306f, 0.42f);
     [SerializeField] TMP_Text stateLabel;
+    [SerializeField] SpriteStateAnimator spriteAnimator;
 
     LightSensor lightSensor;
     SpriteRenderer spriteRenderer;
@@ -80,6 +81,7 @@ public class Shooter : MonoBehaviour
         stateTimer = 0f;
         aimLaser.enabled = next == ShooterState.Aim;
         spriteRenderer.color = next == ShooterState.Blinded ? blindedColor : normalColor;
+        spriteAnimator.Play((int)next);
         if (stateLabel != null) stateLabel.text = next.ToString();
     }
 

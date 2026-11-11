@@ -25,6 +25,7 @@ public class Patroller : MonoBehaviour
     [SerializeField] Color normalColor = new Color(0.608f, 0.42f, 0.839f);
     [SerializeField] Color windUpColor = new Color(1f, 0.29f, 0.24f);
     [SerializeField] TMP_Text stateLabel;
+    [SerializeField] SpriteStateAnimator spriteAnimator;
 
     LightSensor lightSensor;
     SpriteRenderer spriteRenderer;
@@ -91,6 +92,7 @@ public class Patroller : MonoBehaviour
         state = next;
         stateTimer = 0f;
         spriteRenderer.color = next == PatrollerState.WindUp ? windUpColor : normalColor;
+        spriteAnimator.Play((int)next);
         if (stateLabel != null) stateLabel.text = next.ToString();
     }
 

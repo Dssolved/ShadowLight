@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 7021154266687290970}
   - component: {fileID: 617142065993167688}
   - component: {fileID: 1395420180871414941}
+  - component: {fileID: 3361753713908468031}
   m_Layer: 9
   m_Name: Patroller
   m_TagString: Untagged
@@ -265,8 +266,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.608, g: 0.42, b: 0.839, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6f9fa39c80097084b9d51368a86ce461, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -323,6 +324,56 @@ MonoBehaviour:
   recoverSeconds: 1.5
   minFleeSeconds: 1
   waypointReachDistance: 0.05
-  normalColor: {r: 0.608, g: 0.42, b: 0.839, a: 1}
-  windUpColor: {r: 1, g: 0.29, b: 0.24, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  windUpColor: {r: 1, g: 1, b: 1, a: 1}
   stateLabel: {fileID: 2396906017522125862}
+  spriteAnimator: {fileID: 3361753713908468031}
+--- !u!114 &3361753713908468031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449798148230771580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2ca068ee3b07440b14ae7c17153b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteStateAnimator
+  target: {fileID: 7021154266687290970}
+  clips:
+  - frames:
+    - {fileID: 21300000, guid: 6f9fa39c80097084b9d51368a86ce461, type: 3}
+    - {fileID: 21300000, guid: 1cead1cc96d0935469ebf3398e929638, type: 3}
+    - {fileID: 21300000, guid: d60617bb1a3c50b44956d2e3bb0d1029, type: 3}
+    - {fileID: 21300000, guid: 718e7ec1661035143be588e20b0b5a08, type: 3}
+    framesPerSecond: 8
+    loop: 1
+  - frames:
+    - {fileID: 21300000, guid: 0582a35f939f3e246be44bac7fd230ce, type: 3}
+    - {fileID: 21300000, guid: b2207053eb5910549aaf158082d145c9, type: 3}
+    - {fileID: 21300000, guid: f34267d095b72ce4497d36ed1cb9364c, type: 3}
+    - {fileID: 21300000, guid: 295296ce0634c3d419ad24e760f8b202, type: 3}
+    framesPerSecond: 12
+    loop: 1
+  - frames:
+    - {fileID: 21300000, guid: ff6c736cbcfdf3c49aaebe1f594055a9, type: 3}
+    - {fileID: 21300000, guid: 3c1cd1e801905514391f30c401a94175, type: 3}
+    - {fileID: 21300000, guid: 3a4399eb1b2d60442bda23ee1597c5a7, type: 3}
+    framesPerSecond: 6
+    loop: 0
+  - frames:
+    - {fileID: 21300000, guid: abd4d70e9d8a774469fd7001146c7672, type: 3}
+    - {fileID: 21300000, guid: 37d4cafe28c07b143918d93da891fd53, type: 3}
+    - {fileID: 21300000, guid: 50d838b710b579443809c46f3ea092ea, type: 3}
+    - {fileID: 21300000, guid: f3eb418a6b9f9904b8c3041ea0b48c6f, type: 3}
+    framesPerSecond: 2.7
+    loop: 0
+  - frames:
+    - {fileID: 21300000, guid: 303da339f95c5bb4a9d81dcf6c9af29e, type: 3}
+    - {fileID: 21300000, guid: d68fdc8c46871454d82dd3f7ad2567ee, type: 3}
+    - {fileID: 21300000, guid: 6fd46f5ba781f574cb31873501e3830a, type: 3}
+    - {fileID: 21300000, guid: 79e57c8c8b5a10c4d839bcaca1f27fe1, type: 3}
+    framesPerSecond: 10
+    loop: 1
+  autoPlayClip: -1

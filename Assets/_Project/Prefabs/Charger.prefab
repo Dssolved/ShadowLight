@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5437970763403508528}
   - component: {fileID: 4938254268147217300}
   - component: {fileID: 3464664113956725038}
+  - component: {fileID: 719671948774737416}
   m_Layer: 9
   m_Name: Charger
   m_TagString: Untagged
@@ -85,8 +86,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.769, g: 0.416, b: 0.243, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c27ac4c758d50cc40b0ce129e8036302, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -246,10 +247,54 @@ MonoBehaviour:
     m_Bits: 192
   edgeLookAhead: 0.5
   edgeCheckDistance: 1
-  normalColor: {r: 0.769, g: 0.416, b: 0.243, a: 1}
-  windUpColor: {r: 1, g: 0.29, b: 0.24, a: 1}
-  stunnedColor: {r: 0.353, g: 0.306, b: 0.42, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  windUpColor: {r: 1, g: 1, b: 1, a: 1}
+  stunnedColor: {r: 1, g: 1, b: 1, a: 1}
   stateLabel: {fileID: 3316206719514257996}
+  spriteAnimator: {fileID: 719671948774737416}
+--- !u!114 &719671948774737416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022291401799460631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2ca068ee3b07440b14ae7c17153b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteStateAnimator
+  target: {fileID: 3508014058350873838}
+  clips:
+  - frames:
+    - {fileID: 21300000, guid: c27ac4c758d50cc40b0ce129e8036302, type: 3}
+    - {fileID: 21300000, guid: aec21adb19570894eb7f87b0d87ac112, type: 3}
+    framesPerSecond: 2
+    loop: 1
+  - frames:
+    - {fileID: 21300000, guid: ce612a26a57f5b44897bcebc0072cdb9, type: 3}
+    - {fileID: 21300000, guid: 9bd7528b98ced9a4c8499b5670239346, type: 3}
+    - {fileID: 21300000, guid: ff508a7dda57f8e4fb32f05ac2e67488, type: 3}
+    framesPerSecond: 4.3
+    loop: 0
+  - frames:
+    - {fileID: 21300000, guid: c520388c014bfa64094dfec2072d12aa, type: 3}
+    - {fileID: 21300000, guid: 27b9821ec9839914f8c01ccd80ece5de, type: 3}
+    framesPerSecond: 12
+    loop: 1
+  - frames:
+    - {fileID: 21300000, guid: 66bf3efbdde47bc49a0f4d272da8f884, type: 3}
+    - {fileID: 21300000, guid: 49f6b0ccda3fcea42acc7fdb19424556, type: 3}
+    framesPerSecond: 4
+    loop: 1
+  - frames:
+    - {fileID: 21300000, guid: 668526048ddfdbc48b4db3ddd1df6173, type: 3}
+    - {fileID: 21300000, guid: bf2dd31d8a1d874418101576804763ba, type: 3}
+    - {fileID: 21300000, guid: 59badc6c9b72f8742b95a96195c2d9da, type: 3}
+    - {fileID: 21300000, guid: b0eb61d8072781246a30b1d55a1ff2c7, type: 3}
+    framesPerSecond: 8
+    loop: 1
+  autoPlayClip: -1
 --- !u!1 &3981907716957565591
 GameObject:
   m_ObjectHideFlags: 0

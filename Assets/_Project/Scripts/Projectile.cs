@@ -17,6 +17,7 @@ public class Projectile : MonoBehaviour
 
     public void Launch(Vector2 direction)
     {
+        transform.right = direction;
         body.linearVelocity = direction.normalized * speed;
     }
 

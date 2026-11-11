@@ -6,7 +6,8 @@ public class BlockShadow : MonoBehaviour
 {
     [SerializeField] FloatingBlock block;
     [SerializeField] LanternController lantern;
-    [SerializeField] Color shadowColor = new Color(0.553f, 0.498f, 0.69f);
+    [SerializeField] Color shadowColor = Color.white;
+    [SerializeField] float textureScale = 0.25f;
 
     PolygonCollider2D shadowCollider;
     LineRenderer edgeLine;
@@ -14,6 +15,7 @@ public class BlockShadow : MonoBehaviour
     Vector2[] blockCorners;
     Vector2[] shadowCorners;
     Vector3[] meshVertices;
+    Vector2[] meshUvs;
 
     void Awake()
     {
@@ -25,6 +27,7 @@ public class BlockShadow : MonoBehaviour
         blockCorners = new Vector2[cornerCount];
         shadowCorners = new Vector2[cornerCount];
         meshVertices = new Vector3[cornerCount];
+        meshUvs = new Vector2[cornerCount];
 
         Color[] vertexColors = new Color[cornerCount];
         for (int i = 0; i < cornerCount; i++)
@@ -50,10 +53,12 @@ public class BlockShadow : MonoBehaviour
             Vector2 worldShadowCorner = lightPosition + (blockCorners[i] - lightPosition) * scale;
             shadowCorners[i] = transform.InverseTransformPoint(worldShadowCorner);
             meshVertices[i] = shadowCorners[i];
+            meshUvs[i] = worldShadowCorner * textureScale;
         }
 
         shadowCollider.SetPath(0, shadowCorners);
         shadowMesh.vertices = meshVertices;
+        shadowMesh.uv = meshUvs;
         shadowMesh.RecalculateBounds();
         edgeLine.SetPositions(meshVertices);
     }
