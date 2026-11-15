@@ -1,7 +1,7 @@
 # Shadow & Light: project context
 
 Read this at the start of every session, together with `CLAUDE.md` (rules).
-Last updated: 2026-11-11 (art day: HUD, scene textures, companion, shadow bridges, animated enemies).
+Last updated: 2026-11-15 (Assignment 10 handed in: playtest tuning, APK, video; Assignment 11 is next).
 
 ## The game
 2D light-and-shadow puzzle for Android, landscape. Unity 6000.3.23f1, Universal 2D (URP), new Input System.
@@ -32,9 +32,9 @@ Last updated: 2026-11-11 (art day: HUD, scene textures, companion, shadow bridge
 | LightSensor | `IsLit()` for enemies: lantern radius + not in shadow |
 | SpriteStateAnimator | frame animation without Animator: `clips[]` (frames, framesPerSecond, loop) indexed by the enemy state enum; `Play(int)`; `autoPlayClip` for the projectile |
 | Patroller | dark spirit, waypoints; Patrol / Chase / WindUp 0.5 s / Recover 1.5 s / Flee; sight = distance, angle, raycast; calls `spriteAnimator.Play((int)state)` |
-| Shooter | eye in the wall; Idle / Aim 0.6 s (red laser) / Cooldown 1.5 s / Blinded; main raycast sight, green/red debug line; calls `spriteAnimator.Play` |
+| Shooter | eye in the wall; Idle / Aim 0.8 s (red laser) / Cooldown 1.5 s / Blinded; main raycast sight, green/red debug line; calls `spriteAnimator.Play` |
 | Projectile | slow shot (5 u/s, Dynamic body, gravity 0); rotated along its direction in `Launch`; kills the hero, breaks on Walls |
-| Charger | stone beast; Dormant / WindUp 0.7 s (red lane) / Dash / Stunned 1 s / Return home; flips toward the dash target and toward home |
+| Charger | stone beast; Dormant / WindUp 0.8 s (red lane) / Dash / Stunned 1 s / Return home; flips toward the dash target and toward home |
 | CameraFit | zooms the camera out on screens narrower than 16:9 so the 17.8-unit level fits |
 | StateLabelSwitch | one checkbox shows or hides the enemy state labels (off for playtest, on for the video) |
 | SafeArea, MainMenu, PauseMenu | UI from Assignment 8-9 |
@@ -63,7 +63,9 @@ Layers: 6 Walls, 7 Shadow, 8 Hero, 9 Enemy. Slider starts at 0 (lantern x = -6).
 2. Hero lands on the island -> lantern x ~ 4 (slider ~0.83): Charger and Patroller lit, Shooter blinded, bridge 2.
 3. Hero on the last ground -> lantern x 6: everything near the door lit.
 Skilled run: 12.4 s, no deaths. Simulated new player: 3 tries (fell once, Charger once). Bridge windows are 1 unit of lantern x each.
-Not yet re-run with the new art (hero x1.3 visual, bigger orb light, textures): do one full run on the first playtest build.
+Re-run with the final art on 11 Nov (scripted slider, Play mode): door reached in 12.3 s, no deaths, no console errors. Attacks tested one by one: Charger WindUp -> Dash -> hit -> Stunned -> Return, Patroller Patrol/Chase/WindUp/Recover/Flee, Shooter Aim -> shot -> Cooldown; moving the lantern during a wind-up or aim cancels it for all three.
+Known edge case: if the bridge disappears when the hero is within ~0.1 units of the next ground (x ~5.4 at ground C), he can balance on the corner in the Fall state with zero horizontal speed. Not fixed.
+After the playtest (Assignment 10): Shooter aimSeconds 0.6 -> 0.8, Charger windUpSeconds 0.7 -> 0.8. Both are scene overrides on the prefab instances. Tries before/after are in DECISIONS.md.
 
 ## Visuals (art pipeline and sources)
 - URP 2D lights: dark hall, warm lantern light with a visible edge. Hero, enemies, door, lantern, rail, brazier, orb use `SpriteUnlit.mat` so they stay readable in the dark; wall, ground and slabs are lit.
@@ -77,9 +79,9 @@ Not yet re-run with the new art (hero x1.3 visual, bigger orb light, textures): 
 
 ## Course status
 - Assignment 8-9 (UI): done.
-- Assignment 10 (Three Enemy Types), Canvas closes **Thu 12 Nov 12:30** (group OR1-3). Code, level and art done.
-  Still to do: APK, playtest with 2 new people on a phone, change 2+ numbers (old -> new, tries before -> after),
-  2-3 min English video with a script map, DECISIONS.md rewritten by the student.
+- Assignment 10 (Three Enemy Types): handed in before Thu 12 Nov 12:30. Code, level, art, APK (Android, IL2CPP, ARM64, min API 25), playtest, two tuned numbers, video and DECISIONS.md are done.
+  Build notes: Show State Labels (object StateLabels) is OFF in the build and must be ON only while recording a video. Package name is still com.DefaultCompany.urp_2d: change it before the Google Play closed test (about 24 Nov).
+  Device Simulator check: 4:3 tablet fine (CameraFit), the door is slightly cut off at the right edge on exactly 16:9, accepted.
 - Assignment 11 (Data and Saves), Canvas closes Thu 19 Nov 12:30 (OR1-3): move balance numbers into ScriptableObjects, 3 levels from `LevelData` assets,
   JSON save in persistentDataPath with safe loading, save on level end / settings change / OnApplicationPause, reset progress with a confirm panel, level select with locked levels.
   The full brief is in the private notes (`_notes/course`, summary in `_notes/ASSIGNMENTS.md`).
@@ -89,6 +91,7 @@ Not yet re-run with the new art (hero x1.3 visual, bigger orb light, textures): 
 - After each step: line-by-line explanation, list of scene changes, risks, and a suggested commit message.
 - Testing through Unity MCP (Play mode): in one `RunCommand` set `EditorApplication.isPaused = true; isPlaying = true`, wait ~20 s (domain reload), then in a second `RunCommand` loop `EditorApplication.Step()` (about 0.03 s per step). Reaching the door loads MainMenu and losing all lives reloads Game, so look objects up fresh inside the loop and disable the `Hero` component to hold him still. Exit with `isPlaying = false` and wait before the next edit. Scene edits made in Play mode are discarded.
 - Screenshots of the game (the Canvas is Screen Space Overlay and is not captured by cameras): temporarily set the Canvas to Screen Space - Camera with the main camera, sortingOrder 500, render the camera into a RenderTexture, write a PNG to the scratchpad, restore the Canvas. BlockShadow meshes only exist in Play mode.
+- Testing enemy attacks in Play mode: disable the `Hero` component, teleport him (`transform.position`), set the slider value, then `EditorApplication.Step()` in a loop and log the enemy `StateLabel` texts. A disabled Hero keeps his state, so after one death (state Respawn) `Die()` does nothing and lives no longer change. The Shooter cone is 90 degrees: it only sees the hero waiting at gap 2 (x ~2.1), not on ground C.
 - `RunCommand` does not allow `System.Reflection`; read state through sprite names or `SerializedObject`.
 - Setting `SpriteRenderer.drawMode` to Sliced or Tiled through code can multiply the transform scale; reset `localScale` to 1 and check `lossyScale` afterwards. Sliced and Tiled sprites must use Mesh Type Full Rect.
 - `Mathf.SmoothStep(from, to, t)` in Unity is not the shader smoothstep; write t*t*(3-2t) by hand.
