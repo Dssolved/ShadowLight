@@ -5,12 +5,7 @@ public class Hero : MonoBehaviour
 {
     enum HeroState { Walk, Wait, Fall, Respawn, ReachedDoor }
 
-    [SerializeField] float walkSpeed = 1.5f;
-    [SerializeField] float groundCheckDistance = 0.6f;
-    [SerializeField] float edgeLookAhead = 0.4f;
-    [SerializeField] float edgeCheckDistance = 0.9f;
-    [SerializeField] float fallDeathHeight = -6f;
-    [SerializeField] float respawnDelaySeconds = 1f;
+    [SerializeField] PlayerStats stats;
     [SerializeField] LayerMask groundMask;
     [SerializeField] Lives lives;
 
@@ -33,7 +28,7 @@ public class Hero : MonoBehaviour
         switch (state)
         {
             case HeroState.Walk:
-                SetHorizontalSpeed(walkSpeed);
+                SetHorizontalSpeed(stats.walkSpeed);
                 if (!IsGrounded()) SetState(HeroState.Fall);
                 else if (!HasGroundAhead()) SetState(HeroState.Wait);
                 break;
@@ -46,12 +41,12 @@ public class Hero : MonoBehaviour
 
             case HeroState.Fall:
                 SetHorizontalSpeed(0f);
-                if (transform.position.y < fallDeathHeight) Die();
+                if (transform.position.y < stats.fallDeathHeight) Die();
                 else if (IsGrounded()) SetState(HeroState.Walk);
                 break;
 
             case HeroState.Respawn:
-                if (stateTimer >= respawnDelaySeconds)
+                if (stateTimer >= stats.respawnDelaySeconds)
                 {
                     if (lives.HasLivesLeft) ReturnToRespawnPoint();
                     else lives.RestartLevel();
@@ -108,21 +103,23 @@ public class Hero : MonoBehaviour
 
     bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundMask);
+        return Physics2D.Raycast(transform.position, Vector2.down, stats.groundCheckDistance, groundMask);
     }
 
     bool HasGroundAhead()
     {
-        Vector2 lookPoint = (Vector2)transform.position + Vector2.right * edgeLookAhead;
-        return Physics2D.Raycast(lookPoint, Vector2.down, edgeCheckDistance, groundMask);
+        Vector2 lookPoint = (Vector2)transform.position + Vector2.right * stats.edgeLookAhead;
+        return Physics2D.Raycast(lookPoint, Vector2.down, stats.edgeCheckDistance, groundMask);
     }
 
     void OnDrawGizmosSelected()
     {
-        Vector2 lookPoint = (Vector2)transform.position + Vector2.right * edgeLookAhead;
+        if (stats == null) return;
+
+        Vector2 lookPoint = (Vector2)transform.position + Vector2.right * stats.edgeLookAhead;
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.down * groundCheckDistance);
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.down * stats.groundCheckDistance);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(lookPoint, lookPoint + Vector2.down * edgeCheckDistance);
+        Gizmos.DrawLine(lookPoint, lookPoint + Vector2.down * stats.edgeCheckDistance);
     }
 }

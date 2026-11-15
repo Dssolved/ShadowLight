@@ -304,26 +304,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e76411736a3dad43bb8576cdbe24b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Patroller
+  stats: {fileID: 11400000, guid: 5a19be4026789b54aa255d6e39011d2d, type: 2}
   hero: {fileID: 0}
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
-  patrolSpeed: 1.2
-  chaseSpeed: 2
-  fleeSpeed: 2.5
-  viewRange: 4
-  fieldOfViewDegrees: 120
-  sightCheckIntervalSeconds: 0.15
   wallMask:
     serializedVersion: 2
     m_Bits: 64
-  loseSightSeconds: 2
-  attackStartRange: 1
-  strikeRange: 1.3
-  windUpSeconds: 0.5
-  recoverSeconds: 1.5
-  minFleeSeconds: 1
-  waypointReachDistance: 0.05
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   windUpColor: {r: 1, g: 1, b: 1, a: 1}
   stateLabel: {fileID: 2396906017522125862}

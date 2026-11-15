@@ -6,22 +6,10 @@ public class Patroller : MonoBehaviour
 {
     enum PatrollerState { Patrol, Chase, WindUp, Recover, Flee }
 
+    [SerializeField] PatrollerStats stats;
     [SerializeField] Hero hero;
     [SerializeField] Transform[] waypoints;
-    [SerializeField] float patrolSpeed = 1.2f;
-    [SerializeField] float chaseSpeed = 2f;
-    [SerializeField] float fleeSpeed = 2.5f;
-    [SerializeField] float viewRange = 4f;
-    [SerializeField] float fieldOfViewDegrees = 120f;
-    [SerializeField] float sightCheckIntervalSeconds = 0.15f;
     [SerializeField] LayerMask wallMask;
-    [SerializeField] float loseSightSeconds = 2f;
-    [SerializeField] float attackStartRange = 1f;
-    [SerializeField] float strikeRange = 1.3f;
-    [SerializeField] float windUpSeconds = 0.5f;
-    [SerializeField] float recoverSeconds = 1.5f;
-    [SerializeField] float minFleeSeconds = 1f;
-    [SerializeField] float waypointReachDistance = 0.05f;
     [SerializeField] Color normalColor = new Color(0.608f, 0.42f, 0.839f);
     [SerializeField] Color windUpColor = new Color(1f, 0.29f, 0.24f);
     [SerializeField] TMP_Text stateLabel;
@@ -61,28 +49,28 @@ public class Patroller : MonoBehaviour
 
             case PatrollerState.Chase:
                 if (canSeeHero) stateTimer = 0f;
-                MoveTo(hero.transform.position, chaseSpeed);
+                MoveTo(hero.transform.position, stats.chaseSpeed);
                 if (lit) SetState(PatrollerState.Flee);
-                else if (DistanceToHero() <= attackStartRange && IsOnScreen()) SetState(PatrollerState.WindUp);
-                else if (stateTimer >= loseSightSeconds) SetState(PatrollerState.Patrol);
+                else if (DistanceToHero() <= stats.attackStartRange && IsOnScreen()) SetState(PatrollerState.WindUp);
+                else if (stateTimer >= stats.loseSightSeconds) SetState(PatrollerState.Patrol);
                 break;
 
             case PatrollerState.WindUp:
                 if (lit) SetState(PatrollerState.Flee);
-                else if (stateTimer >= windUpSeconds)
+                else if (stateTimer >= stats.windUpSeconds)
                 {
-                    if (DistanceToHero() <= strikeRange) hero.Die();
+                    if (DistanceToHero() <= stats.strikeRange) hero.Die();
                     SetState(PatrollerState.Recover);
                 }
                 break;
 
             case PatrollerState.Recover:
-                if (stateTimer >= recoverSeconds) SetState(PatrollerState.Patrol);
+                if (stateTimer >= stats.recoverSeconds) SetState(PatrollerState.Patrol);
                 break;
 
             case PatrollerState.Flee:
-                MoveTo(FarthestWaypointFromLantern(), fleeSpeed);
-                if (!lit && stateTimer >= minFleeSeconds) SetState(PatrollerState.Patrol);
+                MoveTo(FarthestWaypointFromLantern(), stats.fleeSpeed);
+                if (!lit && stateTimer >= stats.minFleeSeconds) SetState(PatrollerState.Patrol);
                 break;
         }
     }
@@ -99,8 +87,8 @@ public class Patroller : MonoBehaviour
     void Patrol()
     {
         Vector2 target = waypoints[waypointIndex].position;
-        MoveTo(target, patrolSpeed);
-        if (Vector2.Distance(transform.position, target) <= waypointReachDistance)
+        MoveTo(target, stats.patrolSpeed);
+        if (Vector2.Distance(transform.position, target) <= stats.waypointReachDistance)
         {
             waypointIndex = (waypointIndex + 1) % waypoints.Length;
         }
@@ -136,15 +124,15 @@ public class Patroller : MonoBehaviour
         sightTimer -= Time.deltaTime;
         if (sightTimer > 0f) return;
 
-        sightTimer = sightCheckIntervalSeconds;
+        sightTimer = stats.sightCheckIntervalSeconds;
         canSeeHero = CanSeeHero();
     }
 
     bool CanSeeHero()
     {
         Vector2 toHero = hero.transform.position - transform.position;
-        if (toHero.magnitude > viewRange) return false;
-        if (Vector2.Angle(facing, toHero) > fieldOfViewDegrees / 2f) return false;
+        if (toHero.magnitude > stats.viewRange) return false;
+        if (Vector2.Angle(facing, toHero) > stats.fieldOfViewDegrees / 2f) return false;
 
         RaycastHit2D wallHit = Physics2D.Raycast(transform.position, toHero.normalized, toHero.magnitude, wallMask);
         return wallHit.collider == null;
@@ -163,9 +151,11 @@ public class Patroller : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
+        if (stats == null) return;
+
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, viewRange);
+        Gizmos.DrawWireSphere(transform.position, stats.viewRange);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackStartRange);
+        Gizmos.DrawWireSphere(transform.position, stats.attackStartRange);
     }
 }

@@ -3,8 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] float speed = 5f;
-    [SerializeField] float lifetimeSeconds = 4f;
     [SerializeField] LayerMask wallMask;
 
     Rigidbody2D body;
@@ -12,13 +10,13 @@ public class Projectile : MonoBehaviour
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, lifetimeSeconds);
     }
 
-    public void Launch(Vector2 direction)
+    public void Launch(Vector2 direction, float speed, float lifetimeSeconds)
     {
         transform.right = direction;
         body.linearVelocity = direction.normalized * speed;
+        Destroy(gameObject, lifetimeSeconds);
     }
 
     void OnTriggerEnter2D(Collider2D other)

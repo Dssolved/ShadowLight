@@ -6,17 +6,9 @@ public class Charger : MonoBehaviour
 {
     enum ChargerState { Dormant, WindUp, Dash, Stunned, Return }
 
+    [SerializeField] ChargerStats stats;
     [SerializeField] Hero hero;
-    [SerializeField] float triggerRange = 4.5f;
-    [SerializeField] float windUpSeconds = 0.7f;
-    [SerializeField] float dashSpeed = 8f;
-    [SerializeField] float dashDistance = 5f;
-    [SerializeField] float hitRadius = 0.6f;
-    [SerializeField] float stunSeconds = 1f;
-    [SerializeField] float returnSpeed = 2f;
     [SerializeField] LayerMask groundMask;
-    [SerializeField] float edgeLookAhead = 0.5f;
-    [SerializeField] float edgeCheckDistance = 1f;
     [SerializeField] Color normalColor = new Color(0.769f, 0.416f, 0.243f);
     [SerializeField] Color windUpColor = new Color(1f, 0.29f, 0.24f);
     [SerializeField] Color stunnedColor = new Color(0.353f, 0.306f, 0.42f);
@@ -59,22 +51,22 @@ public class Charger : MonoBehaviour
 
             case ChargerState.WindUp:
                 if (lightSensor.IsLit()) SetState(ChargerState.Dormant);
-                else if (stateTimer >= windUpSeconds) SetState(ChargerState.Dash);
+                else if (stateTimer >= stats.windUpSeconds) SetState(ChargerState.Dash);
                 break;
 
             case ChargerState.Dash:
-                transform.position = Vector2.MoveTowards(transform.position, dashTarget, dashSpeed * Time.deltaTime);
-                if (Vector2.Distance(transform.position, hero.transform.position) <= hitRadius) hero.Die();
+                transform.position = Vector2.MoveTowards(transform.position, dashTarget, stats.dashSpeed * Time.deltaTime);
+                if (Vector2.Distance(transform.position, hero.transform.position) <= stats.hitRadius) hero.Die();
                 bool reachedTarget = (Vector2)transform.position == dashTarget;
                 if (reachedTarget || !HasGroundAhead()) SetState(ChargerState.Stunned);
                 break;
 
             case ChargerState.Stunned:
-                if (stateTimer >= stunSeconds) SetState(ChargerState.Return);
+                if (stateTimer >= stats.stunSeconds) SetState(ChargerState.Return);
                 break;
 
             case ChargerState.Return:
-                transform.position = Vector2.MoveTowards(transform.position, homePosition, returnSpeed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, homePosition, stats.returnSpeed * Time.deltaTime);
                 if ((Vector2)transform.position == homePosition) SetState(ChargerState.Dormant);
                 break;
         }
@@ -103,20 +95,20 @@ public class Charger : MonoBehaviour
         float side = Mathf.Sign(hero.transform.position.x - transform.position.x);
         dashDirection = new Vector2(side, 0f);
         spriteRenderer.flipX = side < 0f;
-        dashTarget = (Vector2)transform.position + dashDirection * dashDistance;
+        dashTarget = (Vector2)transform.position + dashDirection * stats.dashDistance;
         dashLane.SetPosition(0, transform.position);
         dashLane.SetPosition(1, dashTarget);
     }
 
     bool HeroInRange()
     {
-        return Vector2.Distance(transform.position, hero.transform.position) <= triggerRange;
+        return Vector2.Distance(transform.position, hero.transform.position) <= stats.triggerRange;
     }
 
     bool HasGroundAhead()
     {
-        Vector2 lookPoint = (Vector2)transform.position + dashDirection * edgeLookAhead;
-        return Physics2D.Raycast(lookPoint, Vector2.down, edgeCheckDistance, groundMask);
+        Vector2 lookPoint = (Vector2)transform.position + dashDirection * stats.edgeLookAhead;
+        return Physics2D.Raycast(lookPoint, Vector2.down, stats.edgeCheckDistance, groundMask);
     }
 
     bool IsOnScreen()
@@ -127,9 +119,11 @@ public class Charger : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
+        if (stats == null) return;
+
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, triggerRange);
+        Gizmos.DrawWireSphere(transform.position, stats.triggerRange);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, hitRadius);
+        Gizmos.DrawWireSphere(transform.position, stats.hitRadius);
     }
 }

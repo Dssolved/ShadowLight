@@ -234,19 +234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede887f5cd0b4b7409222c6b9f27eec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Charger
+  stats: {fileID: 11400000, guid: 726a20e9de780eb4a9808092eee334bb, type: 2}
   hero: {fileID: 0}
-  triggerRange: 4.5
-  windUpSeconds: 0.7
-  dashSpeed: 8
-  dashDistance: 5
-  hitRadius: 0.6
-  stunSeconds: 1
-  returnSpeed: 2
   groundMask:
     serializedVersion: 2
     m_Bits: 192
-  edgeLookAhead: 0.5
-  edgeCheckDistance: 1
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   windUpColor: {r: 1, g: 1, b: 1, a: 1}
   stunnedColor: {r: 1, g: 1, b: 1, a: 1}

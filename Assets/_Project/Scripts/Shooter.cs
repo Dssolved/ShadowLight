@@ -6,16 +6,11 @@ public class Shooter : MonoBehaviour
 {
     enum ShooterState { Idle, Aim, Cooldown, Blinded }
 
+    [SerializeField] ShooterStats stats;
     [SerializeField] Hero hero;
     [SerializeField] Projectile projectilePrefab;
     [SerializeField] Vector2 lookDirection = Vector2.left;
-    [SerializeField] float viewRange = 7f;
-    [SerializeField] float fieldOfViewDegrees = 90f;
-    [SerializeField] float sightCheckIntervalSeconds = 0.15f;
     [SerializeField] LayerMask wallMask;
-    [SerializeField] float aimSeconds = 0.6f;
-    [SerializeField] float cooldownSeconds = 1.5f;
-    [SerializeField] float blindRecoverSeconds = 1f;
     [SerializeField] Color normalColor = new Color(0.878f, 0.353f, 0.278f);
     [SerializeField] Color blindedColor = new Color(0.353f, 0.306f, 0.42f);
     [SerializeField] TMP_Text stateLabel;
@@ -57,7 +52,7 @@ public class Shooter : MonoBehaviour
                 aimLaser.SetPosition(1, hero.transform.position);
                 if (lit) SetState(ShooterState.Blinded);
                 else if (!canSeeHero) SetState(ShooterState.Idle);
-                else if (stateTimer >= aimSeconds)
+                else if (stateTimer >= stats.aimSeconds)
                 {
                     Fire();
                     SetState(ShooterState.Cooldown);
@@ -65,12 +60,12 @@ public class Shooter : MonoBehaviour
                 break;
 
             case ShooterState.Cooldown:
-                if (stateTimer >= cooldownSeconds) SetState(ShooterState.Idle);
+                if (stateTimer >= stats.cooldownSeconds) SetState(ShooterState.Idle);
                 break;
 
             case ShooterState.Blinded:
                 if (lit) stateTimer = 0f;
-                else if (stateTimer >= blindRecoverSeconds) SetState(ShooterState.Idle);
+                else if (stateTimer >= stats.blindRecoverSeconds) SetState(ShooterState.Idle);
                 break;
         }
     }
@@ -89,7 +84,7 @@ public class Shooter : MonoBehaviour
     {
         Vector2 direction = hero.transform.position - transform.position;
         Projectile projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        projectile.Launch(direction);
+        projectile.Launch(direction, stats.projectileSpeed, stats.projectileLifetimeSeconds);
     }
 
     void UpdateSight()
@@ -97,19 +92,19 @@ public class Shooter : MonoBehaviour
         sightTimer -= Time.deltaTime;
         if (sightTimer > 0f) return;
 
-        sightTimer = sightCheckIntervalSeconds;
+        sightTimer = stats.sightCheckIntervalSeconds;
         canSeeHero = CanSeeHero();
     }
 
     bool CanSeeHero()
     {
         Vector2 toHero = hero.transform.position - transform.position;
-        if (toHero.magnitude > viewRange) return false;
-        if (Vector2.Angle(lookDirection, toHero) > fieldOfViewDegrees / 2f) return false;
+        if (toHero.magnitude > stats.viewRange) return false;
+        if (Vector2.Angle(lookDirection, toHero) > stats.fieldOfViewDegrees / 2f) return false;
 
         RaycastHit2D wallHit = Physics2D.Raycast(transform.position, toHero.normalized, toHero.magnitude, wallMask);
         bool lineIsClear = wallHit.collider == null;
-        Debug.DrawLine(transform.position, hero.transform.position, lineIsClear ? Color.green : Color.red, sightCheckIntervalSeconds);
+        Debug.DrawLine(transform.position, hero.transform.position, lineIsClear ? Color.green : Color.red, stats.sightCheckIntervalSeconds);
         return lineIsClear;
     }
 
@@ -121,12 +116,14 @@ public class Shooter : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Vector2 left = Quaternion.Euler(0f, 0f, fieldOfViewDegrees / 2f) * lookDirection.normalized;
-        Vector2 right = Quaternion.Euler(0f, 0f, -fieldOfViewDegrees / 2f) * lookDirection.normalized;
+        if (stats == null) return;
+
+        Vector2 left = Quaternion.Euler(0f, 0f, stats.fieldOfViewDegrees / 2f) * lookDirection.normalized;
+        Vector2 right = Quaternion.Euler(0f, 0f, -stats.fieldOfViewDegrees / 2f) * lookDirection.normalized;
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, viewRange);
+        Gizmos.DrawWireSphere(transform.position, stats.viewRange);
         Gizmos.color = Color.cyan;
-        Gizmos.DrawRay(transform.position, left * viewRange);
-        Gizmos.DrawRay(transform.position, right * viewRange);
+        Gizmos.DrawRay(transform.position, left * stats.viewRange);
+        Gizmos.DrawRay(transform.position, right * stats.viewRange);
     }
 }

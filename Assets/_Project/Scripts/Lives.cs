@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Lives : MonoBehaviour
 {
-    [SerializeField] int maxLives = 3;
+    [SerializeField] PlayerStats stats;
 
     public event Action<int> Changed;
 
@@ -13,7 +13,7 @@ public class Lives : MonoBehaviour
 
     void Awake()
     {
-        Current = maxLives;
+        Current = stats.maxLives;
     }
 
     public void LoseLife()

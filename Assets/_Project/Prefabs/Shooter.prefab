@@ -234,18 +234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d6d1d680176ba47ad4910f7d0a285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooter
+  stats: {fileID: 11400000, guid: 0768f1ed67ba3eb4792fc46394f94b7a, type: 2}
   hero: {fileID: 0}
   projectilePrefab: {fileID: 3594718569356418792, guid: d565400ec9dc9524e8864a92c124e5e2, type: 3}
   lookDirection: {x: -1, y: 0}
-  viewRange: 7
-  fieldOfViewDegrees: 90
-  sightCheckIntervalSeconds: 0.15
   wallMask:
     serializedVersion: 2
     m_Bits: 64
-  aimSeconds: 0.6
-  cooldownSeconds: 1.5
-  blindRecoverSeconds: 1
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   blindedColor: {r: 1, g: 1, b: 1, a: 1}
   stateLabel: {fileID: 3912172703566599819}

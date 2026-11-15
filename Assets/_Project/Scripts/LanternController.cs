@@ -8,15 +8,14 @@ public class LanternController : MonoBehaviour
     [SerializeField] Transform railStart;
     [SerializeField] Transform railEnd;
     [SerializeField] Light2D lanternLight;
-    [SerializeField] float depthFromWall = 10f;
-    [SerializeField] float lightRadius = 7f;
+    [SerializeField] LanternStats stats;
 
-    public float DepthFromWall => depthFromWall;
-    public float LightRadius => lightRadius;
+    public float DepthFromWall => stats.depthFromWall;
+    public float LightRadius => stats.lightRadius;
 
     void Awake()
     {
-        lanternLight.pointLightOuterRadius = lightRadius;
+        lanternLight.pointLightOuterRadius = stats.lightRadius;
     }
 
     void OnEnable()
