@@ -6,6 +6,8 @@ public class Door : MonoBehaviour
 {
     [SerializeField] string nextSceneName = "MainMenu";
     [SerializeField] float loadDelaySeconds = 1f;
+    [SerializeField] int levelIndex;
+    [SerializeField] Lives lives;
 
     bool opened;
 
@@ -17,6 +19,8 @@ public class Door : MonoBehaviour
         {
             opened = true;
             hero.EnterDoor();
+            SaveSystem.Data.CompleteLevel(levelIndex, Time.timeSinceLevelLoad, lives.Current);
+            SaveSystem.Save();
             StartCoroutine(LoadNextScene());
         }
     }
