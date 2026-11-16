@@ -35,6 +35,12 @@ public class Charger : MonoBehaviour
         SetState(ChargerState.Dormant);
     }
 
+    public void Init(Hero sceneHero, LanternController sceneLantern)
+    {
+        hero = sceneHero;
+        lightSensor.Init(sceneLantern);
+    }
+
     void Update()
     {
         stateTimer += Time.deltaTime;

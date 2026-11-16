@@ -8,7 +8,7 @@ public class Patroller : MonoBehaviour
 
     [SerializeField] PatrollerStats stats;
     [SerializeField] Hero hero;
-    [SerializeField] Transform[] waypoints;
+    [SerializeField] Vector2[] waypoints;
     [SerializeField] LayerMask wallMask;
     [SerializeField] Color normalColor = new Color(0.608f, 0.42f, 0.839f);
     [SerializeField] Color windUpColor = new Color(1f, 0.29f, 0.24f);
@@ -31,6 +31,13 @@ public class Patroller : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         mainCamera = Camera.main;
         SetState(PatrollerState.Patrol);
+    }
+
+    public void Init(Hero sceneHero, LanternController sceneLantern, Vector2[] points)
+    {
+        hero = sceneHero;
+        lightSensor.Init(sceneLantern);
+        waypoints = points;
     }
 
     void Update()
@@ -86,7 +93,7 @@ public class Patroller : MonoBehaviour
 
     void Patrol()
     {
-        Vector2 target = waypoints[waypointIndex].position;
+        Vector2 target = waypoints[waypointIndex];
         MoveTo(target, stats.patrolSpeed);
         if (Vector2.Distance(transform.position, target) <= stats.waypointReachDistance)
         {
@@ -108,12 +115,12 @@ public class Patroller : MonoBehaviour
     Vector2 FarthestWaypointFromLantern()
     {
         Vector2 lanternPosition = lightSensor.LanternPosition;
-        Vector2 farthest = waypoints[0].position;
-        foreach (Transform waypoint in waypoints)
+        Vector2 farthest = waypoints[0];
+        foreach (Vector2 waypoint in waypoints)
         {
-            if (Mathf.Abs(waypoint.position.x - lanternPosition.x) > Mathf.Abs(farthest.x - lanternPosition.x))
+            if (Mathf.Abs(waypoint.x - lanternPosition.x) > Mathf.Abs(farthest.x - lanternPosition.x))
             {
-                farthest = waypoint.position;
+                farthest = waypoint;
             }
         }
         return farthest;

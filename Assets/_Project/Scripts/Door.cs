@@ -11,6 +11,12 @@ public class Door : MonoBehaviour
 
     bool opened;
 
+    public void Init(Lives sceneLives, int index)
+    {
+        lives = sceneLives;
+        levelIndex = index;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (opened) return;

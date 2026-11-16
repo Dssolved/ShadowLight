@@ -7,6 +7,11 @@ public class LightSensor : MonoBehaviour
 
     public Vector2 LanternPosition => lantern.transform.position;
 
+    public void Init(LanternController sceneLantern)
+    {
+        lantern = sceneLantern;
+    }
+
     public bool IsLit()
     {
         float distanceToLantern = Vector2.Distance(transform.position, lantern.transform.position);

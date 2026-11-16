@@ -42,6 +42,11 @@ public class BlockShadow : MonoBehaviour
         GetComponent<MeshFilter>().mesh = shadowMesh;
     }
 
+    public void Init(LanternController sceneLantern)
+    {
+        lantern = sceneLantern;
+    }
+
     void LateUpdate()
     {
         Vector2 lightPosition = lantern.transform.position;

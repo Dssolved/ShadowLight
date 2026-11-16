@@ -34,6 +34,12 @@ public class Shooter : MonoBehaviour
         SetState(ShooterState.Idle);
     }
 
+    public void Init(Hero sceneHero, LanternController sceneLantern)
+    {
+        hero = sceneHero;
+        lightSensor.Init(sceneLantern);
+    }
+
     void Update()
     {
         stateTimer += Time.deltaTime;

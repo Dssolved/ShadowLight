@@ -5701,10 +5701,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 536773372}
     - target: {fileID: 1395420180871414941, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
-      propertyPath: chaseSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395420180871414941, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 372996956}
@@ -5712,6 +5708,22 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 880108524}
+    - target: {fileID: 1395420180871414941, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
+      propertyPath: waypoints.Array.data[0].x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395420180871414941, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
+      propertyPath: waypoints.Array.data[0].y
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395420180871414941, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
+      propertyPath: waypoints.Array.data[1].x
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395420180871414941, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
+      propertyPath: waypoints.Array.data[1].y
+      value: -0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2396906017522125862, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
