@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   levelName: The Guarded Hall
   layoutPrefab: {fileID: 3769698078416167640, guid: 31b586f96e7bf944ba50fe938f97ad4d, type: 3}
+  backgroundPrefab: {fileID: 6903708946375003586, guid: 2873d783deca2694e927c542d0e5c563, type: 3}
+  ambientColor: {r: 0.92, g: 0.82, b: 0.82, a: 1}
+  ambientIntensity: 0.32
   heroStart: {x: -8, y: -1.4}
   parTimeSeconds: 20
   enemies:

@@ -1,0 +1,31 @@
+{
+    "asset": "15be2ae22243069498dcdfead0b49228",
+    "fileName": "01a1e8f1-4c54-7f1f-8304-ed1623a79ac4.png",
+    "prompt": "A tall arched stone window opening in a dark castle wall with a thick weathered stone frame and a little ivy, through the window a warm golden and soft blue evening sky with a few clouds. For a 2D puzzle platformer, hand-painted storybook style with a thick dark outline. Flat front view, isolated on a plain white background",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

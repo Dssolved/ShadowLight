@@ -1,0 +1,31 @@
+{
+    "asset": "bc856f4d3560b5a4b905c574d5b9258a",
+    "fileName": "01a1e8f0-dc7c-782f-87c2-5c3243e09abb.png",
+    "prompt": "A jagged crack in an old stone ceiling with broken bricks and rubble around its edges, and pale warm golden daylight shining through the opening. For a 2D puzzle platformer, hand-painted storybook style with a thick dark outline, violet-grey stone. Wide composition, flat front view, the crack runs from the top edge downward, isolated on a plain white background",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

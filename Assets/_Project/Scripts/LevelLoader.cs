@@ -1,9 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] LevelList levelList;
+    [SerializeField] Light2D globalLight;
     [SerializeField] Hero hero;
     [SerializeField] LanternController lantern;
     [SerializeField] Lives lives;
@@ -21,8 +23,20 @@ public class LevelLoader : MonoBehaviour
         hero.transform.position = CurrentLevel.heroStart;
         hero.SetRespawnPoint(CurrentLevel.heroStart);
 
+        BuildBackground();
         BuildLayout(index);
         SpawnEnemies();
+    }
+
+    void BuildBackground()
+    {
+        globalLight.color = CurrentLevel.ambientColor;
+        globalLight.intensity = CurrentLevel.ambientIntensity;
+
+        if (CurrentLevel.backgroundPrefab != null)
+        {
+            Instantiate(CurrentLevel.backgroundPrefab);
+        }
     }
 
     void BuildLayout(int index)

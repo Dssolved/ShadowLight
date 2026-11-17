@@ -3141,6 +3141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelLoader
   levelList: {fileID: 11400000, guid: 458bfad956bd5794ebf15e4e7bc8c962, type: 2}
+  globalLight: {fileID: 619394801}
   hero: {fileID: 536773372}
   lantern: {fileID: 923256493}
   lives: {fileID: 1364938098}

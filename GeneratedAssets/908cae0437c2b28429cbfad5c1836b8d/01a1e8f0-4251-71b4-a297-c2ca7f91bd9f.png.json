@@ -1,0 +1,31 @@
+{
+    "asset": "908cae0437c2b28429cbfad5c1836b8d",
+    "fileName": "01a1e8f0-4251-71b4-a297-c2ca7f91bd9f.png",
+    "prompt": "A cluster of thick gnarled tree roots and torn cobwebs hanging down from the top of the image, for the ceiling of a dark underground cellar in a 2D puzzle platformer. Hand-painted storybook style with a thick dark outline, muted brown and violet-grey colors, a few small pale green leaves. Wide composition, roots start at the very top edge, flat front view, isolated on a plain white background",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
