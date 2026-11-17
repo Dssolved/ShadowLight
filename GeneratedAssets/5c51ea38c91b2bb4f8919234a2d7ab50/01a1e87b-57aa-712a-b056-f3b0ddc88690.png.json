@@ -1,0 +1,41 @@
+{
+    "asset": "5c51ea38c91b2bb4f8919234a2d7ab50",
+    "fileName": "01a1e87b-57aa-712a-b056-f3b0ddc88690.png",
+    "prompt": "Remove the fire completely: no flames, no sparks, no smoke, no glowing embers. The iron bowl now holds cold dark charcoal and grey ash. The carved rune on the stone pedestal becomes dull grey stone with no glow. Keep the bowl, chain, stone pedestal, outline and painting style exactly the same, transparent background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "5c51ea38c91b2bb4f8919234a2d7ab50",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
