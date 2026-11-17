@@ -1,45 +1,21 @@
 using UnityEngine;
 
-[RequireComponent(typeof(PolygonCollider2D), typeof(MeshFilter), typeof(MeshRenderer))]
-[RequireComponent(typeof(LineRenderer))]
+[RequireComponent(typeof(PolygonCollider2D))]
 public class BlockShadow : MonoBehaviour
 {
     [SerializeField] FloatingBlock block;
     [SerializeField] LanternController lantern;
-    [SerializeField] Color shadowColor = Color.white;
-    [SerializeField] float textureScale = 0.25f;
+    [SerializeField] Transform shadowVisual;
 
     PolygonCollider2D shadowCollider;
-    LineRenderer edgeLine;
-    Mesh shadowMesh;
     Vector2[] blockCorners;
     Vector2[] shadowCorners;
-    Vector3[] meshVertices;
-    Vector2[] meshUvs;
 
     void Awake()
     {
         shadowCollider = GetComponent<PolygonCollider2D>();
-        edgeLine = GetComponent<LineRenderer>();
-
-        int cornerCount = FloatingBlock.CornerCount;
-        edgeLine.positionCount = cornerCount;
-        blockCorners = new Vector2[cornerCount];
-        shadowCorners = new Vector2[cornerCount];
-        meshVertices = new Vector3[cornerCount];
-        meshUvs = new Vector2[cornerCount];
-
-        Color[] vertexColors = new Color[cornerCount];
-        for (int i = 0; i < cornerCount; i++)
-        {
-            vertexColors[i] = shadowColor.linear;
-        }
-
-        shadowMesh = new Mesh();
-        shadowMesh.vertices = meshVertices;
-        shadowMesh.triangles = new[] { 0, 1, 2, 0, 2, 3 };
-        shadowMesh.colors = vertexColors;
-        GetComponent<MeshFilter>().mesh = shadowMesh;
+        blockCorners = new Vector2[FloatingBlock.CornerCount];
+        shadowCorners = new Vector2[FloatingBlock.CornerCount];
     }
 
     public void Init(LanternController sceneLantern)
@@ -53,18 +29,19 @@ public class BlockShadow : MonoBehaviour
         float scale = lantern.DepthFromWall / (lantern.DepthFromWall - block.DepthFromWall);
 
         block.FillWorldCorners(blockCorners);
+        Vector2 blockCenter = Vector2.zero;
         for (int i = 0; i < blockCorners.Length; i++)
         {
             Vector2 worldShadowCorner = lightPosition + (blockCorners[i] - lightPosition) * scale;
             shadowCorners[i] = transform.InverseTransformPoint(worldShadowCorner);
-            meshVertices[i] = shadowCorners[i];
-            meshUvs[i] = worldShadowCorner * textureScale;
+            blockCenter += blockCorners[i];
         }
+        blockCenter /= blockCorners.Length;
 
         shadowCollider.SetPath(0, shadowCorners);
-        shadowMesh.vertices = meshVertices;
-        shadowMesh.uv = meshUvs;
-        shadowMesh.RecalculateBounds();
-        edgeLine.SetPositions(meshVertices);
+
+        Vector2 shadowCenter = lightPosition + (blockCenter - lightPosition) * scale;
+        shadowVisual.position = new Vector3(shadowCenter.x, shadowCenter.y, shadowVisual.position.z);
+        shadowVisual.localScale = block.transform.lossyScale * scale;
     }
 }
