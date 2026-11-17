@@ -18,5 +18,5 @@ MonoBehaviour:
   aimSeconds: 0.8
   cooldownSeconds: 1.5
   blindRecoverSeconds: 1
-  projectileSpeed: 5
+  projectileSpeed: 12
   projectileLifetimeSeconds: 4

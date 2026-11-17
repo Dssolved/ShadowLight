@@ -23,7 +23,7 @@ MonoBehaviour:
     - {x: -0.5, y: -0.8}
     - {x: 2.3, y: -0.8}
   - prefab: {fileID: 2022291401799460631, guid: f64d4ee030c8d5d42a9c4337221b1eae, type: 3}
-    position: {x: 2.1, y: -1.6}
+    position: {x: 2.4, y: -1.6}
     waypoints: []
   - prefab: {fileID: 3901133625973972591, guid: 35845712def39c645a8c873dd31c043d, type: 3}
     position: {x: 8.3, y: 1.2}
