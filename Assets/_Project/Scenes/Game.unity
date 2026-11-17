@@ -1577,7 +1577,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 40, y: -165}
-  m_SizeDelta: {x: 500, y: 80}
+  m_SizeDelta: {x: 1100, y: 80}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &756995997
 MonoBehaviour:
@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEVEL 1
+  m_text: 'LEVEL 1: FIRST LIGHT   GOAL 15 S'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3145,6 +3145,7 @@ MonoBehaviour:
   lantern: {fileID: 923256493}
   lives: {fileID: 1364938098}
   stateLabels: {fileID: 750548443}
+  levelText: {fileID: 756995997}
 --- !u!4 &1860097791
 Transform:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
@@ -7,6 +8,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] LanternController lantern;
     [SerializeField] Lives lives;
     [SerializeField] StateLabelSwitch stateLabels;
+    [SerializeField] TMP_Text levelText;
 
     public LevelData CurrentLevel { get; private set; }
 
@@ -14,6 +16,7 @@ public class LevelLoader : MonoBehaviour
     {
         int index = Mathf.Clamp(GameSession.levelIndex, 0, levelList.levels.Length - 1);
         CurrentLevel = levelList.levels[index];
+        levelText.text = "LEVEL " + (index + 1) + ": " + CurrentLevel.levelName.ToUpper() + "   GOAL " + CurrentLevel.parTimeSeconds.ToString("0") + " S";
 
         hero.transform.position = CurrentLevel.heroStart;
         hero.SetRespawnPoint(CurrentLevel.heroStart);
@@ -31,7 +34,8 @@ public class LevelLoader : MonoBehaviour
             shadow.Init(lantern);
         }
 
-        layout.GetComponentInChildren<Door>().Init(lives, index);
+        bool hasNextLevel = index + 1 < levelList.levels.Length;
+        layout.GetComponentInChildren<Door>().Init(lives, index, hasNextLevel);
     }
 
     void SpawnEnemies()
