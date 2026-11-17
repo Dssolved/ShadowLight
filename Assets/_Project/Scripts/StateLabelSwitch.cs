@@ -4,11 +4,10 @@ using UnityEngine;
 public class StateLabelSwitch : MonoBehaviour
 {
     [SerializeField] bool showStateLabels = true;
-    [SerializeField] TMP_Text[] stateLabels;
 
-    void Awake()
+    public void Apply(GameObject enemy)
     {
-        foreach (TMP_Text label in stateLabels)
+        foreach (TMP_Text label in enemy.GetComponentsInChildren<TMP_Text>(true))
         {
             label.gameObject.SetActive(showStateLabels);
         }

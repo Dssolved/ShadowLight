@@ -6,6 +6,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] Hero hero;
     [SerializeField] LanternController lantern;
     [SerializeField] Lives lives;
+    [SerializeField] StateLabelSwitch stateLabels;
 
     public LevelData CurrentLevel { get; private set; }
 
@@ -38,6 +39,7 @@ public class LevelLoader : MonoBehaviour
         foreach (EnemySpawn spawn in CurrentLevel.enemies)
         {
             GameObject enemy = Instantiate(spawn.prefab, spawn.position, Quaternion.identity);
+            stateLabels.Apply(enemy);
 
             if (enemy.TryGetComponent(out Patroller patroller)) patroller.Init(hero, lantern, spawn.waypoints);
             if (enemy.TryGetComponent(out Shooter shooter)) shooter.Init(hero, lantern);
