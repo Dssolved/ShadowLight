@@ -1,0 +1,31 @@
+{
+    "asset": "6c6194052a5ace441a5f02cf53e84ae2",
+    "fileName": "01a1e953-7c7e-7039-a1ba-ed7194f2134c.jpg",
+    "prompt": "A single horizontal game UI button frame, carved dark violet-grey stone with a thin warm amber glowing edge and small iron rivets in the corners. The center is an empty flat dark stone surface with no text and no icon. Hand-painted storybook style with a thick dark outline. Wide shape about 3 times wider than tall, flat front view, isolated on a plain white background",
+    "negativePrompt": "",
+    "model": "game-ui-elements-flux",
+    "modelName": "Game UI Elements (Flux)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

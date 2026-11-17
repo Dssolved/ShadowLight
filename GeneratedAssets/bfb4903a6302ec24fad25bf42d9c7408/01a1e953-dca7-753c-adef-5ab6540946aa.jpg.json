@@ -1,0 +1,31 @@
+{
+    "asset": "bfb4903a6302ec24fad25bf42d9c7408",
+    "fileName": "01a1e953-dca7-753c-adef-5ab6540946aa.jpg",
+    "prompt": "A large rectangular game UI panel frame, carved dark violet-grey stone with iron corner brackets and rivets and a thin warm amber glowing inner edge. The center is an empty flat dark stone surface with no text and no icon. Hand-painted storybook style with a thick dark outline. Wide shape, flat front view, isolated on a plain white background",
+    "negativePrompt": "",
+    "model": "game-ui-elements-flux",
+    "modelName": "Game UI Elements (Flux)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "asset": "7d6897db1233e8e459007eee798632ee",
+    "fileName": "01a1e954-35bc-77b7-af3d-a922357c889a.jpg",
+    "prompt": "A single round game UI button, a dark violet-grey stone disc with an iron ring around it and a thin warm amber glowing rim. The center is an empty flat dark stone surface with no icon and no text. Hand-painted storybook style with a thick dark outline. Flat front view, perfectly round, isolated on a plain white background",
+    "negativePrompt": "",
+    "model": "game-ui-elements-flux",
+    "modelName": "Game UI Elements (Flux)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
