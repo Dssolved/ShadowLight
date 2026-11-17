@@ -790,10 +790,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 59321589-cf6e-4eff-ae4f-92d16775252a
+  cloudProjectId: 53f5f1ea-ed97-4f47-8724-26213a0fb359
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: ShadowLight (1)
+  projectName: ShadowLight
   organizationId: lovelyfromhell
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

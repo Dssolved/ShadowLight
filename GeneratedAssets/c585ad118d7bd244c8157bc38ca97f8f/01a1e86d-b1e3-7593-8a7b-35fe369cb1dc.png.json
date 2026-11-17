@@ -1,0 +1,31 @@
+{
+    "asset": "c585ad118d7bd244c8157bc38ca97f8f",
+    "fileName": "01a1e86d-b1e3-7593-8a7b-35fe369cb1dc.png",
+    "prompt": "A single horizontal floating stone slab for a 2D puzzle platformer, hand-painted storybook style with a thick dark outline, violet-grey stone with slightly chipped corners, one clear crack, a little green moss on the top edge, almost rectangular silhouette about 2.5 times wider than tall, flat front view, no chains, no shadow, isolated on a plain white background",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

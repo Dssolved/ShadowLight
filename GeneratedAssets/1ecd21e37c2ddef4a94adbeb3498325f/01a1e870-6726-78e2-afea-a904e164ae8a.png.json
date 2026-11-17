@@ -1,0 +1,41 @@
+{
+    "asset": "1ecd21e37c2ddef4a94adbeb3498325f",
+    "fileName": "01a1e870-6726-78e2-afea-a904e164ae8a.png",
+    "prompt": "Same art style as the reference: a single horizontal heavy stone slab, hand-painted storybook style with a thick dark outline, but much darker and heavier, deep indigo-black stone, thicker than the reference, with two rusty iron brackets bolted on its left and right ends, no moss, faint amber glow in the cracks. Almost rectangular silhouette about 2.5 times wider than tall, flat front view, no chains, no shadow, isolated on a plain white background",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "c585ad118d7bd244c8157bc38ca97f8f",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
