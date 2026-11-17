@@ -18,7 +18,7 @@ public class LevelLoader : MonoBehaviour
     {
         int index = Mathf.Clamp(GameSession.levelIndex, 0, levelList.levels.Length - 1);
         CurrentLevel = levelList.levels[index];
-        levelText.text = "LEVEL " + (index + 1) + ": " + CurrentLevel.levelName.ToUpper() + "   GOAL " + CurrentLevel.parTimeSeconds.ToString("0") + " S";
+        levelText.text = "LEVEL " + (index + 1) + ": " + CurrentLevel.levelName.ToUpper() + "\n<size=70%>GOAL " + CurrentLevel.parTimeSeconds.ToString("0") + " S</size>";
 
         hero.transform.position = CurrentLevel.heroStart;
         hero.SetRespawnPoint(CurrentLevel.heroStart);
