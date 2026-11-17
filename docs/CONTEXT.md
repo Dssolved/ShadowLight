@@ -13,7 +13,7 @@ Last updated: 2026-11-17 (Assignment 11 code done: data assets, three levels fro
   Handy formula for a block 2 units wide at y 0.6: shadow centre x = 2 * blockX - lanternX, shadow width 4, shadow top exactly at ground level y = -2.
 - The **hero** walks right by himself, waits at an edge with no ground ahead, falls if the ground disappears,
   respawns at the last checkpoint after 1 s. Goal: the door.
-- **Lives:** 3 flames in the HUD. A fall or an enemy hit costs one flame. At 0 the level quietly restarts. No Game Over screen, no timer.
+- **Lives:** one shared pool of flames for the whole game (PlayerStats: maxLives 10, startLives 6, minLivesAtLevelStart 3, healPerBrazier 1), saved in save.json (`flames`, -1 means not set yet). A fall or an enemy hit costs one flame. At the start of a level the pool is raised to at least 3. At 0 the level quietly restarts and the pool is set to 3. A brazier gives +1 flame only the first time that level is played (level has no record yet) and only once per brazier per game run (GameSession.healedBraziers). The HUD shows a flame icon and "xN". No Game Over screen, no timer.
 - **Light rule:** something is *lit* if it is within the lantern `lightRadius` (6) AND not inside a shadow collider.
   Light weakens every enemy; lighting an enemy during its wind-up cancels the attack. This is the player's only defence.
   The lantern is 5 units above the floor enemies, so the horizontal reach of the light is small:

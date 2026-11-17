@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7165070911721708992}
   - component: {fileID: 5771129041247948377}
   - component: {fileID: 5792062822893804450}
+  - component: {fileID: 8870251174953625792}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -93,6 +94,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Checkpoint
   glow: {fileID: 7152774451830588803}
+--- !u!114 &8870251174953625792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53036115535218420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378d63cdf0bd7654aa41d1fc8246b44f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrazierHeal
+  glow: {fileID: 7152774451830588803}
+  stats: {fileID: 11400000, guid: 2351bd78be8adce4d9b2390599735eff, type: 2}
 --- !u!1 &460797732875676829
 GameObject:
   m_ObjectHideFlags: 0

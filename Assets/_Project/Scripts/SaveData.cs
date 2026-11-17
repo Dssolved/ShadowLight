@@ -21,10 +21,16 @@ public class SaveData
     public List<LevelRecord> records = new List<LevelRecord>();
     public float musicVolume = DefaultVolume;
     public float sfxVolume = DefaultVolume;
+    public int flames = -1;
 
     public bool IsUnlocked(int levelIndex)
     {
         return unlockedLevels.Contains(levelIndex);
+    }
+
+    public bool IsCompleted(int levelIndex)
+    {
+        return FindRecord(levelIndex) != null;
     }
 
     public LevelRecord FindRecord(int levelIndex)
@@ -56,6 +62,8 @@ public class SaveData
         if (unlockedLevels == null) unlockedLevels = new List<int>();
         if (records == null) records = new List<LevelRecord>();
         if (!unlockedLevels.Contains(0)) unlockedLevels.Add(0);
+
+        if (flames < -1) flames = -1;
 
         musicVolume = Math.Clamp(musicVolume, MinVolume, 1f);
         sfxVolume = Math.Clamp(sfxVolume, MinVolume, 1f);

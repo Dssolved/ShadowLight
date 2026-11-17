@@ -1,12 +1,10 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FlamesHud : MonoBehaviour
 {
     [SerializeField] Lives lives;
-    [SerializeField] Image[] flames;
-    [SerializeField] Sprite litSprite;
-    [SerializeField] Sprite spentSprite;
+    [SerializeField] TMP_Text countText;
 
     void OnEnable()
     {
@@ -23,11 +21,8 @@ public class FlamesHud : MonoBehaviour
         ShowFlames(lives.Current);
     }
 
-    void ShowFlames(int litCount)
+    void ShowFlames(int count)
     {
-        for (int i = 0; i < flames.Length; i++)
-        {
-            flames[i].sprite = i < litCount ? litSprite : spentSprite;
-        }
+        countText.text = "x" + count;
     }
 }

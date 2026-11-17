@@ -50,6 +50,12 @@ public class LevelLoader : MonoBehaviour
 
         bool hasNextLevel = index + 1 < levelList.levels.Length;
         layout.GetComponentInChildren<Door>().Init(lives, index, hasNextLevel);
+
+        BrazierHeal[] heals = layout.GetComponentsInChildren<BrazierHeal>();
+        for (int i = 0; i < heals.Length; i++)
+        {
+            heals[i].Init(lives, index, i);
+        }
     }
 
     void SpawnEnemies()

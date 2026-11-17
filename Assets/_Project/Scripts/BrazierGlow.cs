@@ -3,6 +3,8 @@ using UnityEngine.Rendering.Universal;
 
 public class BrazierGlow : MonoBehaviour
 {
+    public event System.Action Lit;
+
     [SerializeField] SpriteRenderer brazierSprite;
     [SerializeField] Sprite coldSprite;
     [SerializeField] Sprite litSprite;
@@ -33,6 +35,7 @@ public class BrazierGlow : MonoBehaviour
         litTimer = 0f;
         brazierSprite.sprite = litSprite;
         flameLight.enabled = true;
+        Lit?.Invoke();
     }
 
     void Update()

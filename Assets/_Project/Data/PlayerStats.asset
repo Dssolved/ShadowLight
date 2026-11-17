@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8e6b3636640d54880da537891a85ef, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  maxLives: 3
+  maxLives: 10
+  startLives: 6
+  minLivesAtLevelStart: 3
+  healPerBrazier: 1
   walkSpeed: 1.5
   groundCheckDistance: 0.6
   edgeLookAhead: 0.4
