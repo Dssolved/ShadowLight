@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: LanternStats
   m_EditorClassIdentifier: Assembly-CSharp::LanternStats
   depthFromWall: 10
-  lightRadius: 7
+  lightRadius: 6
+  moveSpeed: 4

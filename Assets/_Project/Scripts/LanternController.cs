@@ -16,21 +16,17 @@ public class LanternController : MonoBehaviour
     void Awake()
     {
         lanternLight.pointLightOuterRadius = stats.lightRadius;
+        transform.position = RailPoint(slider.value);
     }
 
-    void OnEnable()
+    void Update()
     {
-        slider.onValueChanged.AddListener(MoveAlongRail);
-        MoveAlongRail(slider.value);
+        Vector3 target = RailPoint(slider.value);
+        transform.position = Vector3.MoveTowards(transform.position, target, stats.moveSpeed * Time.deltaTime);
     }
 
-    void OnDisable()
+    Vector3 RailPoint(float railProgress)
     {
-        slider.onValueChanged.RemoveListener(MoveAlongRail);
-    }
-
-    void MoveAlongRail(float railProgress)
-    {
-        transform.position = Vector3.Lerp(railStart.position, railEnd.position, railProgress);
+        return Vector3.Lerp(railStart.position, railEnd.position, railProgress);
     }
 }
