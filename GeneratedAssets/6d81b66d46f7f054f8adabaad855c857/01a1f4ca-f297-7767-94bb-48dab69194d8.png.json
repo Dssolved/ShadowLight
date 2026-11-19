@@ -1,0 +1,41 @@
+{
+    "asset": "6d81b66d46f7f054f8adabaad855c857",
+    "fileName": "01a1f4ca-f297-7767-94bb-48dab69194d8.png",
+    "prompt": "Hand-painted 2D game prop, same art style, outline thickness and colors as the reference. A tattered old hanging cloth banner on a short iron rod: deep faded crimson cloth with a worn dark emblem of a simple shield and a spear, frayed pointed bottom edge with a few small holes, thin gold-brown trim. Front view, vertical, centered, tall and narrow. No wall, plain flat background, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e36ca43a90b67d14e9cd806f39a933db",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

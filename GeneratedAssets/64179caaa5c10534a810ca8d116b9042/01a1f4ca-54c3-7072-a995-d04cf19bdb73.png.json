@@ -1,0 +1,41 @@
+{
+    "asset": "64179caaa5c10534a810ca8d116b9042",
+    "fileName": "01a1f4ca-54c3-7072-a995-d04cf19bdb73.png",
+    "prompt": "Seamless tileable hand-painted stone wall texture, exactly the same art style, brick size, outline thickness and layout density as the reference tile. This is a dry, warm variant for a guarded hall: warmer sandy golden-brown stones, almost no moss, faint dark soot and smoke stains above some mortar lines, a few chipped corners and thin hairline cracks. No objects, no holes, no props, no bright spots, even brightness across the whole image so it can repeat across a large wall. Square image that tiles seamlessly on all four edges.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e36681d9f90fbea439b8f5e448235570",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
