@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Hero : MonoBehaviour
 {
-    enum HeroState { Walk, Wait, Fall, Respawn, ReachedDoor }
+    enum HeroState { Walk, Wait, Fall, Respawn, ReachedDoor, Emerge }
 
     [SerializeField] PlayerStats stats;
     [SerializeField] LayerMask groundMask;
@@ -18,7 +18,7 @@ public class Hero : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
-        SetState(HeroState.Fall);
+        SetState(HeroState.Emerge);
     }
 
     void Update()
@@ -54,6 +54,11 @@ public class Hero : MonoBehaviour
                 break;
 
             case HeroState.ReachedDoor:
+                break;
+
+            case HeroState.Emerge:
+                SetHorizontalSpeed(0f);
+                if (stateTimer >= stats.emergeSeconds) SetState(HeroState.Fall);
                 break;
         }
     }

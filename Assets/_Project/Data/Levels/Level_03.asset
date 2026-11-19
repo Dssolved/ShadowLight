@@ -17,7 +17,7 @@ MonoBehaviour:
   backgroundPrefab: {fileID: 6903708946375003586, guid: 2873d783deca2694e927c542d0e5c563, type: 3}
   ambientColor: {r: 0.92, g: 0.82, b: 0.82, a: 1}
   ambientIntensity: 0.32
-  heroStart: {x: -8, y: -1.4}
+  heroStart: {x: -8.3, y: -1.4}
   parTimeSeconds: 20
   enemies:
   - prefab: {fileID: 8449798148230771580, guid: 2714f7d2855e5b64799ecbaf15f3973f, type: 3}

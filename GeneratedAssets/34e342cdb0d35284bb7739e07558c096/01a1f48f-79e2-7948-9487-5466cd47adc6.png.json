@@ -1,0 +1,41 @@
+{
+    "asset": "34e342cdb0d35284bb7739e07558c096",
+    "fileName": "01a1f48f-79e2-7948-9487-5466cd47adc6.png",
+    "prompt": "Hand-painted 2D game sprite, same art style as the reference door: a closed old dark wooden door with an iron lock plate, set into a rough stone wall frame with an arched top. This is an ENTRANCE door, not an exit: darker and plainer than the reference, no warm glow around the edges, no fleur-de-lis shaped hinges, a single heavy iron bar across the middle, cold gray stones with a little moss. Slightly lower and narrower than the reference. Front view, centered, plain background, soft outlines like the reference, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "b69438924abb1d14393564d34dbcb1b1",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

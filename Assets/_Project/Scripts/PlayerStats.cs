@@ -13,4 +13,5 @@ public class PlayerStats : ScriptableObject
     public float edgeCheckDistance = 0.9f;
     public float fallDeathHeight = -6f;
     public float respawnDelaySeconds = 1f;
+    public float emergeSeconds = 1f;
 }
