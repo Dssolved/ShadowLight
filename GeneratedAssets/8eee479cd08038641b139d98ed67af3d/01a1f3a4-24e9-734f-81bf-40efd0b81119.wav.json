@@ -1,0 +1,15 @@
+{
+    "asset": "8eee479cd08038641b139d98ed67af3d",
+    "fileName": "01a1f3a4-24e9-734f-81bf-40efd0b81119.wav",
+    "prompt": "Sound effect: a dark shadow spirit winding up to attack, a low menacing growl and a rising airy whisper that builds tension, no music, no melody.",
+    "negativePrompt": "",
+    "model": "meta-musicgen",
+    "modelName": "Meta MusicGen",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 2.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

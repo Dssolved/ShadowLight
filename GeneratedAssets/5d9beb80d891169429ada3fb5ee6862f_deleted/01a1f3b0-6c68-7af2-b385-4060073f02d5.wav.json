@@ -1,0 +1,15 @@
+{
+    "asset": "5d9beb80d891169429ada3fb5ee6862f",
+    "fileName": "01a1f3b0-6c68-7af2-b385-4060073f02d5.wav",
+    "prompt": "Sound effect: a clean UI button press, one soft deep stone tap with a short low thud and a tiny glassy tail, very short, clear and quiet, no noise, no hiss, no music.",
+    "negativePrompt": "",
+    "model": "meta-musicgen",
+    "modelName": "Meta MusicGen",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 1.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

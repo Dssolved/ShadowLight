@@ -1,0 +1,15 @@
+{
+    "asset": "9972fdfe0069dc24d87ca47aca8246e9",
+    "fileName": "01a1f3a3-d13c-77e1-8997-4f5b22e6c085.wav",
+    "prompt": "Sound effect: a stone brazier igniting, a warm soft whoosh of fire catching, gentle crackle, magical warm glow, no music, no melody.",
+    "negativePrompt": "",
+    "model": "meta-musicgen",
+    "modelName": "Meta MusicGen",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 3.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

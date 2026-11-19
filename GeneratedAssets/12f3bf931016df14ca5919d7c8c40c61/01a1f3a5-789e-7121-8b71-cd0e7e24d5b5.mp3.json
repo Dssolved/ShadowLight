@@ -1,0 +1,15 @@
+{
+    "asset": "12f3bf931016df14ca5919d7c8c40c61",
+    "fileName": "01a1f3a5-789e-7121-8b71-cd0e7e24d5b5.mp3",
+    "prompt": "Quiet mysterious ambient music for a 2D light and shadow puzzle game level. Soft slow pulse, sparse glassy bell notes, low pad, whispering textures, tense but gentle, dark fantasy, violet shadows and warm lantern light. No drums, no vocals, instrumental, seamless loop.",
+    "negativePrompt": "",
+    "model": "google-lyria-3-clip",
+    "modelName": "Google Lyria 3 Clip",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

@@ -1,0 +1,15 @@
+{
+    "asset": "42af7060cf4503942bb3ad407d637b7c",
+    "fileName": "01a1f3af-cb83-7c11-810d-7a68bfe777c2.wav",
+    "prompt": "Sound effect: a soft magical flame igniting, a smooth airy whoosh swelling into a warm low fire glow, gentle shimmer, smooth and clean, no crackling, no snapping, no wood breaking, no music.",
+    "negativePrompt": "",
+    "model": "meta-musicgen",
+    "modelName": "Meta MusicGen",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 3.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

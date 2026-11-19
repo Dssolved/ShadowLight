@@ -1,0 +1,15 @@
+{
+    "asset": "aaba69111c2a42f47a89cfa5dfe1a318",
+    "fileName": "01a1f3a4-5709-748c-b0f3-9cc578dc33f3.wav",
+    "prompt": "Sound effect: a short dull click of a stone button being pressed, a single soft tap on stone, no music, no melody.",
+    "negativePrompt": "",
+    "model": "meta-musicgen",
+    "modelName": "Meta MusicGen",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 1.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

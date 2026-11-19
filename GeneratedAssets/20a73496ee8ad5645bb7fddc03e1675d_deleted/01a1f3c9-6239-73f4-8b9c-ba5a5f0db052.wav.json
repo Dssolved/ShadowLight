@@ -1,0 +1,15 @@
+{
+    "asset": "20a73496ee8ad5645bb7fddc03e1675d",
+    "fileName": "01a1f3c9-6239-73f4-8b9c-ba5a5f0db052.wav",
+    "prompt": "Sound effect: one very short sharp percussive tap, like a fingertip tapping a smooth stone or a wooden block, a single crisp tick with a quick decay, then silence. Dry, clean, minimal, no reverb, no noise, no melody.",
+    "negativePrompt": "",
+    "model": "meta-musicgen",
+    "modelName": "Meta MusicGen",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 1.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

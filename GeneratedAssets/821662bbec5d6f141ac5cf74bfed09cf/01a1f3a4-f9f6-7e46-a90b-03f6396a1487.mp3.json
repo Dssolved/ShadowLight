@@ -1,0 +1,15 @@
+{
+    "asset": "821662bbec5d6f141ac5cf74bfed09cf",
+    "fileName": "01a1f3a4-f9f6-7e46-a90b-03f6396a1487.mp3",
+    "prompt": "Dark fantasy ambient music for a puzzle game main menu. Slow, calm, mysterious. Low soft strings, a distant harp playing sparse notes, deep warm drone, stone hall reverb. A lantern glowing in a dark cave. No drums, no vocals, instrumental, seamless loop.",
+    "negativePrompt": "",
+    "model": "google-lyria-3-clip",
+    "modelName": "Google Lyria 3 Clip",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}
