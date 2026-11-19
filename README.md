@@ -9,6 +9,8 @@ Course project: Game Development Fundamentals, Narxoz University (RK2).
 - Assignment 8-9: Main Menu, HUD and Pause screens.
 - Assignment 10: lantern on a rail, shadow bridges, auto-walking hero with lives and checkpoints, three enemy types (Patroller, Shooter, Charger) that react to the lantern light, one level with all three.
 - Art pass (11 Nov): hand-painted wall, ground, door, lantern slider and flame HUD, smoke-textured shadow bridges, a glowing companion orb that follows the hero, animated enemies from my own sprite sheets.
+- Assignment 11: data in ScriptableObjects (stats, levels), three levels built from data, JSON save with safe loading, level select, reset progress.
+- Assignment 12 (sound pass): AudioMixer (Master, Music with a child Tracks, SFX), 11 sound events with random pitch and clip variation, menu and level music with a 1 s crossfade, volume sliders in dB that are saved and applied at launch, the music softens on pause (snapshots Normal and Paused). A spawn door and a short fade-in at the start of a level, new wall variants and props for levels 2 and 3.
 
 ## Requirements
 
@@ -37,10 +39,12 @@ All screens use Canvas Scaler (Scale With Screen Size, 1920x1080, Match 1), anch
 Assets/_Project/
   Scenes/     MainMenu, Game
   Scripts/    game scripts (one class per file)
-  Prefabs/    Patroller, Shooter, Charger, Projectile
-  Sprites/    hero frames, StoneSlab, Concept/, UI/ (slider, flames), Scene/ (wall, ground, door, props), Enemies/ (frames per enemy)
+  Data/       stats and level assets (ScriptableObjects)
+  Audio/      MainMixer, SoundBank, Music/, Sfx/
+  Prefabs/    Patroller, Shooter, Charger, Projectile, AudioManager, Levels/ (layouts), Backgrounds/
+  Sprites/    hero frames, StoneSlab, Concept/, UI/ (slider, flames), Scene/ (wall tiles, ground, doors, props), Backgrounds/, Enemies/ (frames per enemy)
   Animations/ Hero.controller, HeroIdle, HeroWalk, HeroFall
-  Materials/  Shadow, Laser, SpriteUnlit
+  Materials/  Shadow, Laser, SpriteUnlit, SpriteLit
 ```
 
 ## Art sources
