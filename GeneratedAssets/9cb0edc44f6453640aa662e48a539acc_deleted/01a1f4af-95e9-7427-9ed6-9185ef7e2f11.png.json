@@ -1,0 +1,41 @@
+{
+    "asset": "9cb0edc44f6453640aa662e48a539acc",
+    "fileName": "01a1f4af-95e9-7427-9ed6-9185ef7e2f11.png",
+    "prompt": "Use the reference as the exact style and brick-scale guide: it is one square tile of a hand-painted stone wall. Create ONE wide image, aspect ratio 3:2, of a ruined stone dungeon hall wall that looks like the reference tile repeated 3 times across and 2 times down, but as one unique continuous wall with many hand-placed details. Bricks must be as small as in the reference: about 24 bricks across the full width and about 14 rows. Same warm sandstone-brown palette, soft dark outlines, moss and cracks as the reference.\n\nDetails, rich and varied, placed mostly in the upper third and along the left and right edges: (1) upper left: a ragged collapsed hole in the wall, irregular and jagged, not round, with fallen bricks and rubble pieces below it, dark inside with a little warm daylight leaking in; (2) upper center-right: a faint carved eye symbol in the stones, worn by age, like a watcher's mark; (3) two rusty iron wall rings with short hanging chains, and two empty old iron torch brackets; (4) a long dark water stain streaking down from the top, and patches of green moss in the corners; (5) a few large cracks running through several bricks, some bricks chipped or missing showing darker mortar; (6) thin roots hanging from the top and cobwebs in the top corners.\n\nThe middle band of the image (from 30% to 70% of the height) must stay calm: only bricks, small cracks and subtle stains, no big props, no bright spots, so small characters stay readable. No floor, no ceiling edge, no characters, no text, no frame, no border, no vignette.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e36681d9f90fbea439b8f5e448235570",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 2048,
+        "height": 1600
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

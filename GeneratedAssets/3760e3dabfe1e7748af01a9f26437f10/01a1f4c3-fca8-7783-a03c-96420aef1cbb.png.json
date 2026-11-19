@@ -1,0 +1,41 @@
+{
+    "asset": "3760e3dabfe1e7748af01a9f26437f10",
+    "fileName": "01a1f4c3-fca8-7783-a03c-96420aef1cbb.png",
+    "prompt": "Hand-painted 2D game prop, same art style, outline thickness and colors as the reference. A single rusty iron wall ring bolted to a small square iron plate, with a short hanging chain of 4 or 5 links below it. Front view, vertical composition, centered, tall and narrow. Dark worn iron with a little orange rust and soft highlights. No wall, no shadow on a wall, plain flat background, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e36ca43a90b67d14e9cd806f39a933db",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

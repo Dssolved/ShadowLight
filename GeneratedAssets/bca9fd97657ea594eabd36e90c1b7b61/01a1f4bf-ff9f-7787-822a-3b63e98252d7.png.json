@@ -1,0 +1,41 @@
+{
+    "asset": "bca9fd97657ea594eabd36e90c1b7b61",
+    "fileName": "01a1f4bf-ff9f-7787-822a-3b63e98252d7.png",
+    "prompt": "Seamless tileable hand-painted stone wall texture, exactly the same art style, brick size, outline thickness and layout density as the reference tile. This is a damp, mossy variant: slightly cooler gray-brown stones, dark water stains running down between the bricks, more green moss in the mortar lines and along the lower edges of bricks, a few extra hairline cracks and a couple of chipped corners. No objects, no holes, no props, no bright spots, even brightness across the whole image so it can repeat across a large wall. Square image that tiles seamlessly on all four edges.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e36681d9f90fbea439b8f5e448235570",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
