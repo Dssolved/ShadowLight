@@ -28,3 +28,13 @@ What I asked the agent, what it got wrong, what I changed and why. 3-5 lines per
 2026-11-11 A bug I found while checking my own tools: the orb first showed as a white square because Unity's Mathf.SmoothStep is not the shader smoothstep; I replaced it with the formula t*t*(3-2t).
 2026-11-11 Playtest: two people who had not seen the game played it on a phone. The first needed 2 tries, the second 4 tries. They did not have enough time to react with the lantern.
 2026-11-11 Changed two numbers after the playtest: Shooter aim time 0.6 -> 0.8 s, Charger wind-up 0.7 -> 0.8 s. Tries before -> after: 4 -> 2.
+
+## Week 11 (16-22 Nov)
+
+2026-11-16 Asked for the save system. SaveData keeps the unlocked levels and the records in a List, not a Dictionary: JsonUtility does not save dictionaries, so the file would come out empty. The file is written to save.json.tmp first and then swapped with File.Replace, so a crash in the middle of saving cannot destroy the old save.
+2026-11-16 Loading never throws: a missing file, broken JSON or another version gives default data and a warning in the console. SaveData has a version field and a Sanitize method that fixes impossible values, for example a volume outside 0.0001-1.
+2026-11-16 Balance numbers moved out of the scripts into ScriptableObjects (PatrollerStats, ShooterStats, ChargerStats, PlayerStats, LanternStats). The assets hold only numbers, no runtime state, so a change in Play mode is visible at once and can be done without editing code.
+2026-11-16 Each level is a LevelData asset (name, layout prefab, hero start, par time, enemies with positions and waypoints) and LevelList keeps the order. One LevelLoader builds any level. LevelLoader gives references to the objects with Init methods instead of Find calls, so nothing searches the scene.
+2026-11-17 After my own playtest the levels were too easy, so I made them harder and added shelter slabs. Lantern speed is 4 and light radius is 6. The Shooter projectile speed went from 5 to 12, because at 5 it always flew over a walking hero.
+2026-11-17 My idea: lives are one shared pool for the whole game, saved in save.json as flames. A level starts with at least 3, and a brazier heals one flame only on the first play of a level, so replaying cannot farm lives. The new field has no version bump: an old file reads the default.
+2026-11-17 Art pass: shadows are now soft silhouettes of the block sprites, the brazier lights up when the hero passes, and the UI uses the Cinzel font (SIL OFL) with stone frames. The first APK build failed with "Access is denied" on clang++ and worked on the second try.
