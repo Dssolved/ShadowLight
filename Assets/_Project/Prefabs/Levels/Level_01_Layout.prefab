@@ -261,7 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Door
   menuSceneName: MainMenu
   gameSceneName: Game
-  loadDelaySeconds: 1
+  loadDelaySeconds: 2.5
   levelIndex: 0
   lives: {fileID: 0}
 --- !u!1 &711273468696703597

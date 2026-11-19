@@ -62,7 +62,7 @@ public class Charger : MonoBehaviour
 
             case ChargerState.Dash:
                 transform.position = Vector2.MoveTowards(transform.position, dashTarget, stats.dashSpeed * Time.deltaTime);
-                if (Vector2.Distance(transform.position, hero.transform.position) <= stats.hitRadius) hero.Die();
+                if (Vector2.Distance(transform.position, hero.transform.position) <= stats.hitRadius) hero.DieFromHit();
                 bool reachedTarget = (Vector2)transform.position == dashTarget;
                 if (reachedTarget || !HasGroundAhead()) SetState(ChargerState.Stunned);
                 break;
@@ -86,6 +86,7 @@ public class Charger : MonoBehaviour
         spriteRenderer.color = ColorFor(next);
         if (next == ChargerState.Return) spriteRenderer.flipX = homePosition.x < transform.position.x;
         spriteAnimator.Play((int)next);
+        if (next == ChargerState.WindUp) SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.chargerWindUp);
         if (stateLabel != null) stateLabel.text = next.ToString();
     }
 

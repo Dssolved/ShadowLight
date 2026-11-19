@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour
     {
         if (other.TryGetComponent(out Hero hero))
         {
-            hero.Die();
+            hero.DieFromHit();
             Destroy(gameObject);
         }
         else if (IsWall(other.gameObject))

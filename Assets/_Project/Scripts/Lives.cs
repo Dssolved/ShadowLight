@@ -38,6 +38,7 @@ public class Lives : MonoBehaviour
 
     public void RestartLevel()
     {
+        SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.lose);
         SaveSystem.Data.flames = stats.minLivesAtLevelStart;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

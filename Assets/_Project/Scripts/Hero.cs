@@ -68,10 +68,21 @@ public class Hero : MonoBehaviour
         SetState(HeroState.ReachedDoor);
     }
 
+    bool CanDie => state != HeroState.Respawn && state != HeroState.ReachedDoor;
+
+    public void DieFromHit()
+    {
+        if (!CanDie) return;
+
+        SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.heroHit);
+        Die();
+    }
+
     public void Die()
     {
-        if (state == HeroState.Respawn || state == HeroState.ReachedDoor) return;
+        if (!CanDie) return;
 
+        SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.heroDeath);
         lives.LoseLife();
         SetState(HeroState.Respawn);
     }

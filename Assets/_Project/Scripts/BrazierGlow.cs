@@ -35,6 +35,7 @@ public class BrazierGlow : MonoBehaviour
         litTimer = 0f;
         brazierSprite.sprite = litSprite;
         flameLight.enabled = true;
+        SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.brazierFire);
         Lit?.Invoke();
     }
 

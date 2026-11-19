@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsPanel : MonoBehaviour
 {
+    [SerializeField] AudioMixer mixer;
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
     [SerializeField] GameObject confirmPanel;
@@ -36,11 +38,18 @@ public class SettingsPanel : MonoBehaviour
     void SetMusicVolume(float value)
     {
         SaveSystem.Data.musicVolume = value;
+        ApplyVolumes();
     }
 
     void SetSfxVolume(float value)
     {
         SaveSystem.Data.sfxVolume = value;
+        ApplyVolumes();
+    }
+
+    void ApplyVolumes()
+    {
+        MixerVolume.Apply(mixer, SaveSystem.Data.musicVolume, SaveSystem.Data.sfxVolume);
     }
 
     public void AskReset()
@@ -57,6 +66,7 @@ public class SettingsPanel : MonoBehaviour
     {
         SaveSystem.Reset();
         ShowSavedValues();
+        ApplyVolumes();
         confirmPanel.SetActive(false);
     }
 }

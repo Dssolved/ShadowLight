@@ -83,6 +83,7 @@ public class Shooter : MonoBehaviour
         aimLaser.enabled = next == ShooterState.Aim;
         spriteRenderer.color = next == ShooterState.Blinded ? blindedColor : normalColor;
         spriteAnimator.Play((int)next);
+        if (next == ShooterState.Aim) SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.shooterAim);
         if (stateLabel != null) stateLabel.text = next.ToString();
     }
 
@@ -91,6 +92,7 @@ public class Shooter : MonoBehaviour
         Vector2 direction = hero.transform.position - transform.position;
         Projectile projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         projectile.Launch(direction, stats.projectileSpeed, stats.projectileLifetimeSeconds);
+        SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.shooterShot);
     }
 
     void UpdateSight()

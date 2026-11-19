@@ -66,7 +66,7 @@ public class Patroller : MonoBehaviour
                 if (lit) SetState(PatrollerState.Flee);
                 else if (stateTimer >= stats.windUpSeconds)
                 {
-                    if (DistanceToHero() <= stats.strikeRange) hero.Die();
+                    if (DistanceToHero() <= stats.strikeRange) hero.DieFromHit();
                     SetState(PatrollerState.Recover);
                 }
                 break;
@@ -88,6 +88,7 @@ public class Patroller : MonoBehaviour
         stateTimer = 0f;
         spriteRenderer.color = next == PatrollerState.WindUp ? windUpColor : normalColor;
         spriteAnimator.Play((int)next);
+        if (next == PatrollerState.WindUp) SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.patrollerWindUp);
         if (stateLabel != null) stateLabel.text = next.ToString();
     }
 

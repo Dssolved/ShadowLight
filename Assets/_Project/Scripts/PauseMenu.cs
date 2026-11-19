@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private string menuSceneName = "MainMenu";
+    [SerializeField] private AudioMixerSnapshot normalSnapshot;
+    [SerializeField] private AudioMixerSnapshot pausedSnapshot;
+    [SerializeField] private float snapshotFadeSeconds = 0.3f;
 
     private void Start()
     {
@@ -30,6 +34,7 @@ public class PauseMenu : MonoBehaviour
     public void ToMenu()
     {
         Time.timeScale = 1f;
+        normalSnapshot.TransitionTo(snapshotFadeSeconds);
         SceneManager.LoadScene(menuSceneName);
     }
 
@@ -37,5 +42,7 @@ public class PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(paused);
         Time.timeScale = paused ? 0f : 1f;
+        AudioMixerSnapshot target = paused ? pausedSnapshot : normalSnapshot;
+        target.TransitionTo(snapshotFadeSeconds);
     }
 }
