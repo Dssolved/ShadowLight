@@ -8,6 +8,9 @@ public class HeroFootsteps : MonoBehaviour
 
     public event System.Action Stepped;
 
+    public bool IsWalking => Mathf.Abs(body.linearVelocity.x) >= minSpeed;
+    public float StepIntervalSeconds => stepIntervalSeconds;
+
     Rigidbody2D body;
     float stepTimer;
 
@@ -18,7 +21,7 @@ public class HeroFootsteps : MonoBehaviour
 
     void Update()
     {
-        if (Mathf.Abs(body.linearVelocity.x) < minSpeed)
+        if (!IsWalking)
         {
             stepTimer = 0f;
             return;

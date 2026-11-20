@@ -9,6 +9,10 @@ public class Hero : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     [SerializeField] Lives lives;
 
+    public event System.Action Landed;
+    public event System.Action Died;
+    public event System.Action Respawned;
+
     Rigidbody2D body;
     HeroState state;
     float stateTimer;
@@ -90,6 +94,7 @@ public class Hero : MonoBehaviour
         SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.heroDeath);
         lives.LoseLife();
         SetState(HeroState.Respawn);
+        Died?.Invoke();
     }
 
     void ReturnToRespawnPoint()
@@ -98,10 +103,13 @@ public class Hero : MonoBehaviour
         body.linearVelocity = Vector2.zero;
         body.simulated = true;
         SetState(HeroState.Fall);
+        Respawned?.Invoke();
     }
 
     void SetState(HeroState next)
     {
+        if (state == HeroState.Fall && next == HeroState.Walk && stateTimer >= stats.landingMinFallSeconds) Landed?.Invoke();
+
         state = next;
         stateTimer = 0f;
 

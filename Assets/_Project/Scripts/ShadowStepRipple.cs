@@ -3,6 +3,7 @@ using UnityEngine;
 public class ShadowStepRipple : MonoBehaviour
 {
     [SerializeField] HeroFootsteps footsteps;
+    [SerializeField] Hero hero;
     [SerializeField] SpriteRenderer[] rings;
     [SerializeField] LayerMask shadowMask;
     [SerializeField] float checkDistance = 0.8f;
@@ -27,11 +28,13 @@ public class ShadowStepRipple : MonoBehaviour
     void OnEnable()
     {
         footsteps.Stepped += OnStep;
+        hero.Landed += OnStep;
     }
 
     void OnDisable()
     {
         footsteps.Stepped -= OnStep;
+        hero.Landed -= OnStep;
     }
 
     void OnStep()
