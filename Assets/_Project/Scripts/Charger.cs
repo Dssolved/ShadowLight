@@ -2,9 +2,11 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(LightSensor), typeof(SpriteRenderer), typeof(LineRenderer))]
-public class Charger : MonoBehaviour
+public class Charger : MonoBehaviour, IWindUpSource
 {
     enum ChargerState { Dormant, WindUp, Dash, Stunned, Return }
+
+    public bool IsWindingUp => state == ChargerState.WindUp;
 
     [SerializeField] ChargerStats stats;
     [SerializeField] Hero hero;

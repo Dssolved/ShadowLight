@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 4938254268147217300}
   - component: {fileID: 3464664113956725038}
   - component: {fileID: 719671948774737416}
+  - component: {fileID: 4130269742310583202}
   m_Layer: 9
   m_Name: Charger
   m_TagString: Untagged
@@ -372,6 +373,22 @@ MonoBehaviour:
     framesPerSecond: 8
     loop: 1
   autoPlayClip: -1
+--- !u!114 &4130269742310583202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022291401799460631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5c21aed3ea2f24c816718f1026254b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyWindUpPulse
+  pulseX: 0.05
+  pulseY: -0.07
+  pulsesPerSecond: 6
+  returnSpeed: 2
 --- !u!1 &3981907716957565591
 GameObject:
   m_ObjectHideFlags: 0

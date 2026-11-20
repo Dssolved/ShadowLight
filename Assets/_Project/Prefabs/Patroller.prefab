@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 617142065993167688}
   - component: {fileID: 1395420180871414941}
   - component: {fileID: 3361753713908468031}
+  - component: {fileID: 4018174693133805549}
   m_Layer: 9
   m_Name: Patroller
   m_TagString: Untagged
@@ -366,6 +367,22 @@ MonoBehaviour:
     framesPerSecond: 10
     loop: 1
   autoPlayClip: -1
+--- !u!114 &4018174693133805549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449798148230771580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5c21aed3ea2f24c816718f1026254b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyWindUpPulse
+  pulseX: 0.12
+  pulseY: 0.12
+  pulsesPerSecond: 3
+  returnSpeed: 2
 --- !u!1 &8488663516663068220
 GameObject:
   m_ObjectHideFlags: 0

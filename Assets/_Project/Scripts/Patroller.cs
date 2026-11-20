@@ -2,9 +2,11 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(LightSensor), typeof(SpriteRenderer))]
-public class Patroller : MonoBehaviour
+public class Patroller : MonoBehaviour, IWindUpSource
 {
     enum PatrollerState { Patrol, Chase, WindUp, Recover, Flee }
+
+    public bool IsWindingUp => state == PatrollerState.WindUp;
 
     [SerializeField] PatrollerStats stats;
     [SerializeField] Hero hero;
