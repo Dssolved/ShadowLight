@@ -28,7 +28,7 @@ public class Door : MonoBehaviour
         {
             opened = true;
             hero.EnterDoor();
-            SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.win);
+            SfxPlayer.Instance.PlayJingle(SfxPlayer.Instance.Bank.win);
             SaveSystem.Data.CompleteLevel(levelIndex, Time.timeSinceLevelLoad, lives.Current);
             SaveSystem.Save();
             StartCoroutine(LoadNextScene());

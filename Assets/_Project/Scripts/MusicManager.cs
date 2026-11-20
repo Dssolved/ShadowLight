@@ -7,11 +7,16 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioSource sourceA;
     [SerializeField] AudioSource sourceB;
     [SerializeField] float fadeSeconds = 1f;
+    [SerializeField] float duckVolume = 0.15f;
+    [SerializeField] float duckFadeSeconds = 0.3f;
 
     AudioSource current;
     AudioSource other;
     float fadeTimer;
     bool fading;
+    float duckFactor = 1f;
+    float duckTarget = 1f;
+    float duckHoldTimer;
 
     void Awake()
     {
@@ -45,19 +50,39 @@ public class MusicManager : MonoBehaviour
         fading = true;
     }
 
+    public void Duck(float holdSeconds)
+    {
+        duckTarget = duckVolume;
+        duckHoldTimer = holdSeconds;
+    }
+
     void Update()
     {
-        if (!fading) return;
-
-        fadeTimer += Time.unscaledDeltaTime;
-        float t = Mathf.Clamp01(fadeTimer / fadeSeconds);
-        current.volume = t;
-        other.volume = 1f - t;
-
-        if (t >= 1f)
+        if (duckHoldTimer > 0f)
         {
-            other.Stop();
-            fading = false;
+            duckHoldTimer -= Time.unscaledDeltaTime;
+            if (duckHoldTimer <= 0f) duckTarget = 1f;
         }
+        duckFactor = Mathf.MoveTowards(duckFactor, duckTarget, Time.unscaledDeltaTime / duckFadeSeconds);
+
+        float currentLevel = 1f;
+        float otherLevel = 0f;
+
+        if (fading)
+        {
+            fadeTimer += Time.unscaledDeltaTime;
+            float t = Mathf.Clamp01(fadeTimer / fadeSeconds);
+            currentLevel = t;
+            otherLevel = 1f - t;
+
+            if (t >= 1f)
+            {
+                other.Stop();
+                fading = false;
+            }
+        }
+
+        current.volume = currentLevel * duckFactor;
+        other.volume = otherLevel * duckFactor;
     }
 }

@@ -86,8 +86,8 @@ Licenses of AI-generated assets must be checked against the Unity AI terms befor
 | Music/MenuMusic_GeminiLoop.ogg | "Where the Light Pools", generated with Gemini (Google) from the author's text prompt; converted to OGG and made loopable with ffmpeg (end crossfaded into the start) |
 | Music/LevelMusic_GeminiLoop.ogg | "Beneath the Ancient Hall", generated with Gemini (Google) from the author's text prompt; converted to OGG and made loopable with ffmpeg |
 | Music/MenuMusic.wav, LevelMusic.wav | Generated with Unity AI (Google Lyria 3 Clip); tried and not used |
-| Sfx/Win.wav | Cut (9-15 s, fade-out) from "Light in the Stone Hall", generated with Gemini (Google) |
-| Sfx/Lose.wav | Cut (32-38 s, fade-out) from "Winter in the Temple", generated with Gemini (Google) |
+| Sfx/Win.wav | Cut (9-12.4 s, fade-out 1.6 s, -7 dB) from "Light in the Stone Hall", generated with Gemini (Google) |
+| Sfx/Lose.wav | Cut (32-37 s, fade-out 3.2 s, -7 dB) from "Winter in the Temple", generated with Gemini (Google) |
 | Sfx/BrazierFire.wav | "Zazhiganie ognya i prodolzhitelnyj zvuk goreniya" from ZvukBox.ru (free file, ZvukBox license agreement allows use in games and commercial projects, attribution not required); converted and shortened with ffmpeg |
 | Sfx/Footstep1-3.wav | "Footsteps on stone" by freesound_community on Pixabay (Pixabay Content License); three single steps cut with ffmpeg |
 | Sfx/HeroHit.wav | "Dark impact hit" by Universfield on Pixabay (Pixabay Content License); shortened with ffmpeg |

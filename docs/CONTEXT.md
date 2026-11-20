@@ -40,7 +40,7 @@ Last updated: 2026-11-19, night. Assignment 11 was handed in on 19 Nov. Assignme
 | HeroAnimator | feeds Animator parameters `Speed` and `Falling` from the Rigidbody2D velocity |
 | Companion | the glowing orb next to the hero: SmoothDamp to hero + offset, sine bob |
 | Checkpoint | trigger (2 units wide): sets the hero respawn point and calls `glow.Ignite()` |
-| Door | trigger on the exit door: hero stops, win sound, `SaveSystem.Data.CompleteLevel(levelIndex, time, flames)` + `Save()`, then after `loadDelaySeconds` (2.5 since 19 Nov, set in the three layout prefabs; the script default is still 1) loads the next level (sets `GameSession.levelIndex + 1`, reloads Game) or MainMenu after the last level; `Init(lives, index, hasNextLevel)` from LevelLoader |
+| Door | trigger on the exit door: hero stops, win sound, `SaveSystem.Data.CompleteLevel(levelIndex, time, flames)` + `Save()`, then after `loadDelaySeconds` (3.0 since 20 Nov, set in the three layout prefabs; the script default is still 1; the win jingle is 3.4 s with a 1.6 s fade-out) loads the next level (sets `GameSession.levelIndex + 1`, reloads Game) or MainMenu after the last level; `Init(lives, index, hasNextLevel)` from LevelLoader |
 | Lives | shared pool: Awake takes `SaveSystem.Data.flames` (-1 -> startLives), raises it to `minLivesAtLevelStart`, clamps to `maxLives`; `LoseLife`, `Heal(amount)` write the pool back into the save data and fire `Changed`; `RestartLevel()` plays the lose sound, sets the pool to the floor and reloads the scene (GameSession keeps the level) |
 | FlamesHud | on `Lives.Changed`: text "xN", 10 ember Images (full/empty), flame icon red + rotation tremble at <= 2, pop scale and colors on loss or heal (unscaled time) |
 | LightSensor | `IsLit()` for enemies: lantern radius + not in shadow; `Init(lantern)` |
@@ -133,7 +133,8 @@ Layers: 6 Walls, 7 Shadow, 8 Hero, 9 Enemy.
 |---|---|
 | SoundBank | ScriptableObject `Audio/SoundBank.asset`: one `AudioClip[]` per event (footsteps, heroHit, heroDeath, brazierFire, patrollerWindUp, shooterAim, shooterShot, chargerWindUp, uiClick, win, lose) |
 | SfxPlayer | singleton (`Instance`, duplicate destroys itself, `DontDestroyOnLoad`); `Bank` property; `Play(AudioClip[])` picks a random clip that differs from the last one, sets a random pitch 0.92-1.08 and plays it on the next of 6 voice AudioSources (round robin, so the pitch of a playing sound is never changed) |
-| MusicManager | singleton; two AudioSources; `Play(clip)` returns early when that clip is already playing, else swaps the sources and crossfades 1 s with `unscaledDeltaTime`; loops |
+| MusicManager | singleton; two AudioSources; `Play(clip)` returns early when that clip is already playing, else swaps the sources and crossfades 1 s with `unscaledDeltaTime`; loops; `Duck(holdSeconds)` (20 Nov) lowers both source volumes to `duckVolume` (0.15) in `duckFadeSeconds` (0.3), holds, then returns to 1; used by the win and lose jingles |
+| SfxPlayer.PlayJingle | (20 Nov) like `Play` but with pitch 1 (no random detune) and calls `MusicManager.Duck(clip.length)`; used by Door (win) and Lives.RestartLevel (lose). Win.wav (3.4 s, -19 LUFS) and Lose.wav (5 s, -25 LUFS) were re-cut from the Gemini tracks with long fade-outs and -7 dB |
 | MixerVolume | on the AudioManager: `Start` sets `mixer.updateMode = UnscaledTime` and applies the saved volumes; static `Apply(mixer, music, sfx)` writes `Log10(max(v, 0.0001)) * 20` into `MusicVol` and `SFXVol` |
 | SceneMusic | in `Start` asks `MusicManager` to play the clip of the scene |
 | ButtonClickSounds | in `Start` finds every Button (inactive too) with `FindObjectsByType` and adds a click sound listener |

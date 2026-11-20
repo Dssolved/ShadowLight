@@ -28,6 +28,17 @@ public class SfxPlayer : MonoBehaviour
 
     public void Play(AudioClip[] clips)
     {
+        PlayClip(clips, true);
+    }
+
+    public void PlayJingle(AudioClip[] clips)
+    {
+        PlayClip(clips, false);
+        if (lastClip != null) MusicManager.Instance.Duck(lastClip.length);
+    }
+
+    void PlayClip(AudioClip[] clips, bool randomPitch)
+    {
         if (clips == null || clips.Length == 0) return;
 
         AudioClip clip = clips[Random.Range(0, clips.Length)];
@@ -40,7 +51,7 @@ public class SfxPlayer : MonoBehaviour
         AudioSource voice = voices[nextVoice];
         nextVoice = (nextVoice + 1) % voices.Length;
 
-        voice.pitch = Random.Range(minPitch, maxPitch);
+        voice.pitch = randomPitch ? Random.Range(minPitch, maxPitch) : 1f;
         voice.clip = clip;
         voice.Play();
     }

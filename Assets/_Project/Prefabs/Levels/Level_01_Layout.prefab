@@ -353,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Door
   menuSceneName: MainMenu
   gameSceneName: Game
-  loadDelaySeconds: 2.5
+  loadDelaySeconds: 3
   levelIndex: 0
   lives: {fileID: 0}
 --- !u!1 &711273468696703597
@@ -1342,7 +1342,6 @@ MonoBehaviour:
   lantern: {fileID: 0}
   shadowVisual: {fileID: 6097095288966417722}
   coneFilter: {fileID: 7213547244776155544}
-  edge: {fileID: 0}
   coneColor: {r: 0.11, g: 0.086, b: 0.149, a: 1}
   coneAlphaAtBlock: 0.3
   coneAlphaAtShadow: 0.08
