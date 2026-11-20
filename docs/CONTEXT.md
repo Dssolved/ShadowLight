@@ -31,7 +31,9 @@ Last updated: 2026-11-19, night. Assignment 11 was handed in on 19 Nov. Assignme
 | BrazierHeal | on the Checkpoint: listens to `BrazierGlow.Lit`; heals `healPerBrazier` only if the level has no record yet and the brazier key (level * 10 + index) is new in `GameSession.healedBraziers`; `Init(lives, level, index)` from LevelLoader |
 | Hero | FSM Walk / Wait / Fall / Respawn / ReachedDoor / Emerge (Emerge is last in the enum; the hero starts in it for `PlayerStats.emergeSeconds` = 1 s, standing still, then Fall -> Walk; a respawn at a checkpoint skips it); ground and edge rays; `Die()` is the only death path (plays the death sound); `DieFromHit()` is called by Patroller, Charger and Projectile: it plays the hit sound and calls `Die()`; `CanDie` blocks double deaths; numbers from PlayerStats |
 | HeroFadeIn | on the Hero: sets the Body sprite alpha to 0 in Awake and fades it to 1 in `fadeSeconds` (0.4), then disables itself |
-| HeroFootsteps | on the Hero: while `abs(velocity.x) >= minSpeed` (0.5) plays a footstep every `stepIntervalSeconds` (0.45); the timer is reset when standing |
+| HeroFootsteps | on the Hero: while `abs(velocity.x) >= minSpeed` (0.5) plays a footstep every `stepIntervalSeconds` (0.45); the timer is reset when standing; raises the event `Stepped` on every step |
+| ShadowStepRipple | on the Hero (20 Nov): on `Stepped` raycasts down on the Shadow layer; if it hits a shadow bridge, one of 4 pooled ring sprites (`StepRipples/Ring0..3`, `RingRipple.png`) appears at the hit point, grows and fades in 0.6 s. Gives the bridge a magical surface so the hero does not look like he floats |
+| ShadowStepPuff | on the Hero (20 Nov): same trigger; 2 tiny pale motes per step from a pool of 12 (`StepPuffs/Puff0..11`, `MistPuff.png`) rise straight up and fade in 0.8 s |
 | HeroAnimator | feeds Animator parameters `Speed` and `Falling` from the Rigidbody2D velocity |
 | Companion | the glowing orb next to the hero: SmoothDamp to hero + offset, sine bob |
 | Checkpoint | trigger (2 units wide): sets the hero respawn point and calls `glow.Ignite()` |

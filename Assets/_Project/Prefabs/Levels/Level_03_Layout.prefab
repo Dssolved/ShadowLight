@@ -491,6 +491,7 @@ MonoBehaviour:
   lantern: {fileID: 0}
   shadowVisual: {fileID: 4499719212064035264}
   coneFilter: {fileID: 3419124915283840336}
+  edge: {fileID: 0}
   coneColor: {r: 0.11, g: 0.086, b: 0.149, a: 1}
   coneAlphaAtBlock: 0.3
   coneAlphaAtShadow: 0.08
@@ -1069,6 +1070,7 @@ MonoBehaviour:
   lantern: {fileID: 0}
   shadowVisual: {fileID: 8353457462822062529}
   coneFilter: {fileID: 5412376646082182204}
+  edge: {fileID: 0}
   coneColor: {r: 0.11, g: 0.086, b: 0.149, a: 1}
   coneAlphaAtBlock: 0.3
   coneAlphaAtShadow: 0.08
@@ -1418,6 +1420,7 @@ MonoBehaviour:
   lantern: {fileID: 0}
   shadowVisual: {fileID: 9169040894284836214}
   coneFilter: {fileID: 8335395975295934736}
+  edge: {fileID: 0}
   coneColor: {r: 0.11, g: 0.086, b: 0.149, a: 1}
   coneAlphaAtBlock: 0.3
   coneAlphaAtShadow: 0.08

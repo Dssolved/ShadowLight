@@ -6,6 +6,8 @@ public class HeroFootsteps : MonoBehaviour
     [SerializeField] float minSpeed = 0.5f;
     [SerializeField] float stepIntervalSeconds = 0.45f;
 
+    public event System.Action Stepped;
+
     Rigidbody2D body;
     float stepTimer;
 
@@ -27,5 +29,6 @@ public class HeroFootsteps : MonoBehaviour
 
         stepTimer = stepIntervalSeconds;
         SfxPlayer.Instance.Play(SfxPlayer.Instance.Bank.footsteps);
+        Stepped?.Invoke();
     }
 }
