@@ -51,3 +51,7 @@ What I asked the agent, what it got wrong, what I changed and why. 3-5 lines per
 2026-11-20 I asked Gemini twice for a smoother walk cycle. It kept the same 3-4 leg poses (and drew extra arms once), and ffmpeg interpolation between similar frames added nothing, so I kept the 8 frames and added a body bob, a landing squash and a fade on death.
 2026-11-20 Phone test of the sound: the win and lose jingles were much louder than the music, overlapped it and the lose jingle cut off. I made them quieter with longer fade-outs, the music ducks while they play, and the door waits 3 s. After the second test the lose jingle was too quiet, so I raised it by 4 dB.
 2026-11-20 Enemy sprites had a thin white fringe from the background removal. I wrote an editor script that replaces the colors at the edges and shrinks the alpha by one pixel, and the enemies now pulse during the wind-up.
+
+## Week 13 (23-29 Nov)
+
+2026-11-21 Controls: on a phone the lantern slider was awkward, because crossing the whole rail needs two fingers on two ends of the screen. I asked the agent for options and chose a relative swipe: a transparent full-screen panel turns a horizontal drag into a change of the slider value (1.5 rails per screen width), so one thumb is enough and a swipe can be repeated. The slider stays as an indicator, so the lantern, the shadows and the levels did not change. The agent first got the Image type wrong in its editor script (UnityEngine.UI.Image against a namespace called Image), which was a compile error only.

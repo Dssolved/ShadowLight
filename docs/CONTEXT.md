@@ -6,7 +6,7 @@ Last updated: 2026-11-19, night. Assignment 11 was handed in on 19 Nov. Assignme
 ## The game
 2D light-and-shadow puzzle for Android, landscape. Unity 6000.3.23f1, Universal 2D (URP), new Input System.
 
-- The player moves a **lantern** along a rail at the top with a UI **slider**. The slider sets a target; the lantern **travels** to it at `moveSpeed` (4 units/s, the whole rail takes 3 s). The player never controls the hero.
+- The player moves a **lantern** along a rail at the top by swiping anywhere on the screen (LanternSwipeInput since 21 Nov; the UI **slider** is now only an indicator that the swipe drives). The slider value sets a target; the lantern **travels** to it at `moveSpeed` (4 units/s, the whole rail takes 3 s). The player never controls the hero.
 - **Floating blocks** hang at a depth `z` in front of the wall. Their shadow on the wall is a projection from the lantern:
   `k = Lz / (Lz - z)`, `S(V) = L + (V - L) * k` for every block corner V (L = lantern, Lz = lantern depth 10, block z 5, so k = 2).
   The shadow is a `PolygonCollider2D` on layer **Shadow**: the hero walks on it like ground ("shadow bridge").
@@ -25,6 +25,7 @@ Last updated: 2026-11-19, night. Assignment 11 was handed in on 19 Nov. Assignme
 | Script | Responsibility |
 |---|---|
 | LanternController | each Update moves the lantern with `MoveTowards` toward the rail point of the slider value (`RailPoint` = Lerp RailStart-RailEnd); starts at the slider point in Awake; sets the Light2D radius from LanternStats |
+| LanternSwipeInput | (21 Nov) on the full-screen transparent `SwipeZone` Image (first child of the Canvas, behind the HUD); `IDragHandler`: `OnDrag` adds `delta.x / Screen.width * railPerScreenWidth` (1.5) to `slider.normalizedValue`, so a swipe anywhere moves the lantern like a touchpad. The slider stays as an indicator: its graphics have `raycastTarget` off, so only the swipe zone gets the touch. LevelText and Flame1 also have raycast off so a swipe can start on them |
 | FloatingBlock | block depth (z=5); world corners from the sprite bounds |
 | BlockShadow | each LateUpdate projects the 4 block corners into the PolygonCollider2D (the walkable bridge), moves and scales the child `Visual` SpriteRenderer (soft silhouette of the block sprite, scale = block scale * k) and rebuilds a faint dark cone mesh (child `Cone`, 4 quads between block corners and shadow corners, alpha 0.3 -> 0.08); `Init(lantern)` from LevelLoader |
 | BrazierGlow | on the brazier sprite object (SpriteLit material since 19 Nov): cold sprite until `Ignite()`, then lit sprite, warm Light2D (pop 3.2 -> 1.8, Perlin flicker), the fire sound and the `Lit` event (once) |
