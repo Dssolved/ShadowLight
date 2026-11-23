@@ -1,0 +1,41 @@
+{
+    "asset": "4cad92d1639e3584aa68fd25e0b994f1",
+    "fileName": "01a2097d-bd0f-7c34-b9ae-7aa2ecef7601.png",
+    "prompt": "Edit this arched door: keep the exact same shape, size, framing, arch, door planks, hinges and painting style. Make the stones of the arch wet and glossy dark teal-grey with deep teal damp moss instead of the green moss, add a few water droplets, and make the wooden planks dark and damp. Keep the transparent background exactly as it is, no new objects, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "4cad92d1639e3584aa68fd25e0b994f1",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

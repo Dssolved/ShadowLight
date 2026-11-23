@@ -1,0 +1,41 @@
+{
+    "asset": "089c8bee0cb90aa4da72ac0358e7cb2c",
+    "fileName": "01a20984-cf46-72e7-8046-32380ea0a415.png",
+    "prompt": "Edit this arched door: keep the exact same shape, size, framing, arch, door planks, hinges and painting style. Make the stones of the arch dark purple-grey, covered with thick leafy ivy and vines and a few tiny purple flowers instead of the moss, and let thin roots creep over the wooden planks. Keep the transparent background exactly as it is, no new objects, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "089c8bee0cb90aa4da72ac0358e7cb2c",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

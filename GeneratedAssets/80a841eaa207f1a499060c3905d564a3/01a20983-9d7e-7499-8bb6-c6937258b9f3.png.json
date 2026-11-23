@@ -1,0 +1,41 @@
+{
+    "asset": "80a841eaa207f1a499060c3905d564a3",
+    "fileName": "01a20983-9d7e-7499-8bb6-c6937258b9f3.png",
+    "prompt": "Edit this arched door: keep the exact same shape, size, framing, arch, door planks, hinges and painting style. Make the stones of the arch dark charcoal-black with grey ash and soot instead of the moss, make the wooden planks charred and dark, and add a few thin faint dull orange ember cracks, no bright glow. Keep the transparent background exactly as it is, no new objects, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "80a841eaa207f1a499060c3905d564a3",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
