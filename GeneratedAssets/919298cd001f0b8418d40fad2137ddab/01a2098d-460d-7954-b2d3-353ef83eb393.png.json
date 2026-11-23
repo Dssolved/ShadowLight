@@ -1,0 +1,50 @@
+{
+    "asset": "919298cd001f0b8418d40fad2137ddab",
+    "fileName": "01a2098d-460d-7954-b2d3-353ef83eb393.png",
+    "prompt": "Hand-painted storybook style wide game banner, 2:1 panoramic composition with the main scene in the center and calm dark atmospheric space on the left and right. A dark gothic stone hall wall in deep violet shadow (#1C1626). At the top center a glowing iron lantern hanging from a thin iron rail, in the same style as the reference lantern, casts a warm amber (#F2B84B) cone of light down onto the wall. Below it a floating stone slab, in the same style as the second reference, casts a soft dark shadow that forms a bridge in the air, and a small hooded hero with a rose-pink scarf walks across the shadow bridge. Warm amber light against deep violet shadows, cinematic and cozy. No text, no letters, no UI.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 0,
+                "doodle": [],
+                "label": "Image 1",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "c9038f1f282f48b44b428005ab3a995d",
+                "unlabeledIndex": 0
+            },
+            {
+                "doodleReferenceType": 0,
+                "doodle": [],
+                "label": "Image 2",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "c585ad118d7bd244c8157bc38ca97f8f",
+                "unlabeledIndex": 1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 768
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "asset": "0c12ef4f05fe50442af03818ae3f0096",
+    "fileName": "01a2098c-532d-786c-a49d-f3d55395a19e.png",
+    "prompt": "Hand-painted storybook style mobile game app icon, square, full bleed with no border. In the center, one glowing iron lantern hanging from a small roller wheel, in the same style as the reference lantern, with a warm amber flame (#F2B84B) and a soft warm halo of light. Deep dark violet background (#1C1626 to #3A2B52) with a faint dark stone wall texture. High contrast, simple readable silhouette, the lantern centered inside the middle 70 percent of the image so rounded corners do not cut it. No text, no letters, no symbols.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "c9038f1f282f48b44b428005ab3a995d",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
