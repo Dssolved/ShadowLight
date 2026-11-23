@@ -1,0 +1,41 @@
+{
+    "asset": "13588e775175ec04e8be8243e95c345e",
+    "fileName": "01a20957-1467-7068-8963-72e4f4200e95.png",
+    "prompt": "Seamless tileable dark dungeon wall of stacked stone bricks, hand-painted storybook style. Same brick size, same stone scale, same layout style and same painting style as the reference image, but overgrown: dark green-grey stones with thin ivy vines creeping along the mortar, patches of moss and tiny leaves. Flat front view, no perspective, evenly lit, dark muted value so it works as a background, no objects, no text.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e36681d9f90fbea439b8f5e448235570",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

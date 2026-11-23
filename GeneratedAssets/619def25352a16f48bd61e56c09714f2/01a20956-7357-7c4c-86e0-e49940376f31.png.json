@@ -1,0 +1,41 @@
+{
+    "asset": "619def25352a16f48bd61e56c09714f2",
+    "fileName": "01a20956-7357-7c4c-86e0-e49940376f31.png",
+    "prompt": "Seamless tileable dark dungeon wall of stacked stone bricks, hand-painted storybook style. Same brick size, same stone scale, same layout style and same painting style as the reference image, but burnt and sooty: charcoal-black stones, soot stains, muted dark red-brown mortar and a very few faint dull ember glints deep in some cracks. Flat front view, no perspective, evenly lit, dark muted value so it works as a background, no objects, no text.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e36681d9f90fbea439b8f5e448235570",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

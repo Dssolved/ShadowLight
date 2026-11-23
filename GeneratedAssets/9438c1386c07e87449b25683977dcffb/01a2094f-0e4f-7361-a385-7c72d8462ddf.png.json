@@ -1,0 +1,41 @@
+{
+    "asset": "9438c1386c07e87449b25683977dcffb",
+    "fileName": "01a2094f-0e4f-7361-a385-7c72d8462ddf.png",
+    "prompt": "Edit this ground block: keep the exact same shape, size, framing, stone layout and painting style. Make the stones look wet and glossy, a darker cooler blue-green tone, with deep teal damp moss along the top edge instead of the green moss, a few water droplets and damp streaks. Keep the transparent background exactly as it is, no new objects, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "9438c1386c07e87449b25683977dcffb",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

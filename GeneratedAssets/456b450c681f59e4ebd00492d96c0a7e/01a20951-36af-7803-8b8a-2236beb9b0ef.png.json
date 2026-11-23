@@ -1,0 +1,41 @@
+{
+    "asset": "456b450c681f59e4ebd00492d96c0a7e",
+    "fileName": "01a20951-36af-7803-8b8a-2236beb9b0ef.png",
+    "prompt": "Edit this ground block: keep the exact same shape, size, framing, stone layout and painting style. Make the stones dark charcoal-black, with grey ash and soot along the top edge instead of the green moss, and a few thin faint dull orange ember cracks between some stones, no bright glow. Keep the transparent background exactly as it is, no new objects, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "456b450c681f59e4ebd00492d96c0a7e",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "asset": "1f14a473e3ffa734c9134686b66c3780",
+    "fileName": "01a20951-b7fa-745c-9d95-16811bf8db5f.png",
+    "prompt": "Edit this ground block: keep the exact same shape, size, framing, stone layout and painting style. Keep the stones dark purple-grey, with thick leafy ivy and vines along the top edge instead of the moss, a few tiny purple flowers, and thin roots growing between some stones. Keep the transparent background exactly as it is, no new objects, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "1f14a473e3ffa734c9134686b66c3780",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
