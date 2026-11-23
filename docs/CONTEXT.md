@@ -26,6 +26,7 @@ Last updated: 2026-11-19, night. Assignment 11 was handed in on 19 Nov. Assignme
 |---|---|
 | LanternController | each Update moves the lantern with `MoveTowards` toward the rail point of the slider value (`RailPoint` = Lerp RailStart-RailEnd); starts at the slider point in Awake; sets the Light2D radius from LanternStats |
 | LanternSwipeInput | (21 Nov) on the full-screen transparent `SwipeZone` Image (first child of the Canvas, behind the HUD); `IDragHandler`: `OnDrag` adds `delta.x / Screen.width * railPerScreenWidth` (1.5) to `slider.normalizedValue`, so a swipe anywhere moves the lantern like a touchpad. The slider stays as an indicator: its graphics have `raycastTarget` off, so only the swipe zone gets the touch. LevelText and Flame1 also have raycast off so a swipe can start on them |
+| UiFlicker, UiSway | (23 Nov, main menu) `UiFlicker` on the two glow Images: Perlin noise changes the alpha and scale of the `target` Graphic (own random seed, unscaled time). `UiSway` on the title plaque: rotates it by `swayDegrees` 0.8 around its top pivot, `periodSeconds` 6 |
 | FloatingBlock | block depth (z=5); world corners from the sprite bounds |
 | BlockShadow | each LateUpdate projects the 4 block corners into the PolygonCollider2D (the walkable bridge), moves and scales the child `Visual` SpriteRenderer (soft silhouette of the block sprite, scale = block scale * k) and rebuilds a faint dark cone mesh (child `Cone`, 4 quads between block corners and shadow corners, alpha 0.3 -> 0.08); `Init(lantern)` from LevelLoader |
 | BrazierGlow | on the brazier sprite object (SpriteLit material since 19 Nov): cold sprite until `Ignite()`, then lit sprite, warm Light2D (pop 3.2 -> 1.8, Perlin flicker), the fire sound and the `Lit` event (once) |
@@ -100,7 +101,7 @@ Checked 17 Nov with an autopilot in Play mode: the right play reaches the door o
 - Canvas > SafeArea > Flames (Flame1 icon, Count text; Flame2 and Flame3 are switched off leftovers), Embers (10 ember Images), LevelText (900x110, two lines, set by LevelLoader), PauseButton (round stone), Slider (lantern art); PausePanel > PauseSafeArea > Frame, PausedTitle, Resume/Restart/Menu. EventSystem, PauseMenuController. LevelLoader also holds `globalLight` (the Global Light 2D).
 - In the editor the Game scene shows no ground or enemies until Play mode. Edit geometry in the layout prefabs and enemies in the LevelData assets.
 
-**MainMenu**: camera clear color #120E18; Canvas > WallBackdrop (tiled WallTile, dark), Background (dark overlay 0.55), SafeArea (Title, PlayButton -> `LevelSelectPanel.SetActive(true)`, SettingsButton, QuitButton);
+**MainMenu**: camera clear color #120E18; Canvas > WallBackdrop (tiled WallTile, dark), Background (dark overlay 0.55), SafeArea (TitlePlaque since 23 Nov: Image of `TitlePlaque.png` 1182x826, pivot top, y 891, UiSway, children GlowLeft and GlowRight = `SoftGlow.png` 300x300 amber with UiFlicker; Title now font 78 at y 282, on top of the plaque; PlayButton -> `LevelSelectPanel.SetActive(true)`, SettingsButton, QuitButton);
 SettingsPanel (off; music and sound sliders 0.0001-1 with SliderReleaseSave, Reset Progress, Back, ConfirmPanel with Yes/Cancel);
 LevelSelectPanel (off; title, Level1-3 buttons -> `LevelSelect.PlayLevel(0/1/2)`, Back). MainMenuController (Quit), SaveOnPause, EventSystem.
 
