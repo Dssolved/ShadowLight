@@ -1,0 +1,31 @@
+{
+    "asset": "55a9c6b132af36845a8cfa578634f1d5",
+    "fileName": "01a20938-9fcf-735f-9a55-9b740095e67f.png",
+    "prompt": "Hand-painted storybook style game effect texture on a pure black background. A single glowing ember: a small round core of bright yellow-white heat surrounded by a soft orange-amber halo, slightly uneven organic edge like a floating spark of fire, smooth falloff into the black. Perfectly centered, no outline, no text, pure black background (#000000).",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 576
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

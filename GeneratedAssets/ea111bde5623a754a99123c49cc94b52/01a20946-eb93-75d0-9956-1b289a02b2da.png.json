@@ -1,0 +1,50 @@
+{
+    "asset": "ea111bde5623a754a99123c49cc94b52",
+    "fileName": "01a20946-eb93-75d0-9956-1b289a02b2da.png",
+    "prompt": "Hand-painted storybook style, dark gothic hall, matching the reference images. A single small closed iron padlock seen from the front, symmetrical: a rounded dark iron body with a worn bronze trim and a small keyhole, a thick curved shackle on top, and a short heavy chain link hanging from the bottom. Muted colors, deep violet shadows (#1C1626), bronze accents like the reference button frame, soft painterly edges, no glow. Plain flat single-color background, no text, no letters, no symbols.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 0,
+                "doodle": [],
+                "label": "Image 1",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "6c6194052a5ace441a5f02cf53e84ae2",
+                "unlabeledIndex": 0
+            },
+            {
+                "doodleReferenceType": 0,
+                "doodle": [],
+                "label": "Image 2",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "b643ed668a7257242aef3ee355023b7e",
+                "unlabeledIndex": 1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 576
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

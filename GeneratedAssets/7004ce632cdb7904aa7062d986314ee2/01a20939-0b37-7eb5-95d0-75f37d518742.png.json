@@ -1,0 +1,31 @@
+{
+    "asset": "7004ce632cdb7904aa7062d986314ee2",
+    "fileName": "01a20939-0b37-7eb5-95d0-75f37d518742.png",
+    "prompt": "Hand-painted storybook style game effect texture on a pure black background. A soft drifting wisp of mist or smoke, irregular cloudy shape with gentle curling edges, pale grey-violet tones (#8D7FB0 to #2A2338), semi-transparent feel, fading smoothly into the black at the edges. Perfectly centered, no outline, no text, pure black background (#000000).",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 576
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

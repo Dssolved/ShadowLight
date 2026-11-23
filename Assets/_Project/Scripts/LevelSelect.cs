@@ -8,6 +8,7 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] LevelList levelList;
     [SerializeField] Button[] levelButtons;
     [SerializeField] TMP_Text[] levelLabels;
+    [SerializeField] GameObject[] lockIcons;
     [SerializeField] string gameSceneName = "Game";
 
     void OnEnable()
@@ -17,6 +18,7 @@ public class LevelSelect : MonoBehaviour
             bool unlocked = SaveSystem.Data.IsUnlocked(i);
             levelButtons[i].interactable = unlocked;
             levelLabels[i].text = unlocked ? LabelFor(i) : "LOCKED";
+            lockIcons[i].SetActive(!unlocked);
         }
     }
 
