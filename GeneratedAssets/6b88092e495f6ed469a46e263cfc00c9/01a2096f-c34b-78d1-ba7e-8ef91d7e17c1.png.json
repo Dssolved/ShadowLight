@@ -1,0 +1,50 @@
+{
+    "asset": "6b88092e495f6ed469a46e263cfc00c9",
+    "fileName": "01a2096f-c34b-78d1-ba7e-8ef91d7e17c1.png",
+    "prompt": "Hand-painted storybook style, dark gothic hall, matching the reference images. A small wall mount bracket for a rail: a flat iron plate fixed to the wall with four rivets and a half-round cradle clamp on top that holds a thin horizontal rod, seen from the front, symmetrical. Muted colors, deep violet shadows, soft painterly edges. Plain flat single-color background, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 0,
+                "doodle": [],
+                "label": "Image 1",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "c9038f1f282f48b44b428005ab3a995d",
+                "unlabeledIndex": 0
+            },
+            {
+                "doodleReferenceType": 0,
+                "doodle": [],
+                "label": "Image 2",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "6f30e495dc139af4a94d3d3b4cb0430a",
+                "unlabeledIndex": 1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
