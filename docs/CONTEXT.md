@@ -63,7 +63,7 @@ Last updated: 2026-11-19, night. Assignment 11 was handed in on 19 Nov. Assignme
 | SaveOnPause | `OnApplicationPause(true)` -> `SaveSystem.Save()` (one object in each scene) |
 | SliderReleaseSave | `IPointerUpHandler` on a settings slider: saves when the finger is released |
 | SettingsPanel | MainMenu settings: music and sound sliders write into `SaveSystem.Data` and call `MixerVolume.Apply` (has an `AudioMixer mixer` field); Reset Progress opens a confirm panel; Yes calls `SaveSystem.Reset()` and applies the default volumes |
-| LevelSelect | MainMenu level select: in `OnEnable` every button gets `interactable = IsUnlocked(i)` and the text `1. FIRST LIGHT   BEST 11.3 S` or `LOCKED`; `PlayLevel(i)` sets GameSession and loads Game |
+| LevelSelect | MainMenu level select: in `OnEnable` every button gets `interactable = IsUnlocked(i)` and the text `1. FIRST LIGHT   BEST 11.3 S` or `LOCKED`, and its `LockIcon` child (`lockIcons[i]`, `Padlock.png`, added 23 Nov) is switched on only when locked; `PlayLevel(i)` sets GameSession and loads Game |
 | MainMenu | only `Quit()` now (Play opens the level select panel) |
 | CameraFit | zooms the camera out on screens narrower than 16:9 so the 17.8-unit level fits |
 | SafeArea | UI from Assignment 8-9 |
