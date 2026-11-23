@@ -1,0 +1,41 @@
+{
+    "asset": "8eab7983ab3ebde4ead4709b4eaa7c93",
+    "fileName": "01a20963-5903-787f-9c00-c1715c3a814d.png",
+    "prompt": "Hand-painted storybook style, dark gothic hall, matching the reference image. A long horizontal iron rail beam seen from the front: a thin dark iron bar with worn edges and a few small rivets, with a heavy iron end bracket with bolts at the far left and the far right, the long middle part plain and simple so it can be stretched. Plain flat single-color background, no text, no symbols.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "b4fb31bde2c1ce34ab77bcd7948ce1f4",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 2048,
+        "height": 512
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

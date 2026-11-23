@@ -1,0 +1,41 @@
+{
+    "asset": "c9038f1f282f48b44b428005ab3a995d",
+    "fileName": "01a20963-e8b1-7a1f-bc03-f9c4bd661ea7.png",
+    "prompt": "Edit this lantern: keep the lantern exactly the same. Add above its top ring a small iron trolley carriage: a small iron wheel on a short bracket, with the ring hooked into it, so the lantern clearly hangs from a rail. Keep the same painting style and colors. Plain flat single-color background, no text.",
+    "negativePrompt": "",
+    "model": "gemini-nano-banana-2-1",
+    "modelName": "Nano Banana 2.1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "c9038f1f282f48b44b428005ab3a995d",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}
